@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETŠ Nikola Tesla - Kabineti | Oficijalni sajt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/kabinetistyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Slike/Logo/images-removebg-preview (2) (1).png" type="image/x-icon">
+
+    </head>
+
+<body>
+
+    <header>
+        <div class="navigacija">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            
+            <ul class="d-none d-lg-flex">
+                <li><a href="./index.html" >Početna</a></li>
+                <li><a href="./onama.html" class="aktivno">O školi</a></li>
+                <li><a href="./smerovi.html">Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" >Kontakt</a></li>
+            </ul>
+
+            <button class="hamburger-btn d-lg-none" id="otvori-meni">
+                 <i class="fas fa-bars ms-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="fullscreen-meni" class="overlay-meni">
+        <div class="overlay-top">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            <div class="zatvori-meni" id="zatvori-meni">
+                <span>Close</span> <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="./index.html" >Početna</a></li>
+                <li><a href="./onama.html" class="aktivno-overlay">O školi</a></li>
+                <li><a href="./smerovi.html" class=>Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" >Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- HERO SEKCIJA -->
+<div class="oprema-hero">
+    <div class="oprema-hero-sadrzaj">
+        <p class="breadcrumb">Početna &gt; O školi &gt; <span>Moderna oprema</span></p>
+        <h1>Moderna oprema</h1>
+        <p class="hero-podnaslov">Savremeni kabineti i laboratorije opremljeni najnovijom tehnologijom</p>
+    </div>
+</div>
+
+<main class="oprema-glavna-sekcija">
+    <div class="oprema-kontejner">
+
+        <!-- NASLOV -->
+        <div class="oprema-naslov">
+            <span class="oprema-tag">NAŠI PROSTORI</span>
+            <h2>Kabineti i laboratorije</h2>
+        </div>
+
+        <!-- FILTERI -->
+        <div class="filter-dugmad">
+            <button class="filter aktivan" data-filter="sve">Sve</button>
+            <button class="filter" data-filter="it">IT kabineti</button>
+            <button class="filter" data-filter="elektro">Elektro lab</button>
+            <button class="filter" data-filter="mehatronika">Mehatronika</button>
+            <button class="filter" data-filter="energetika">Energetika</button>
+        </div>
+
+        <!-- GLAVNI SLIDER -->
+        <div class="slider-kontejner">
+
+            <button class="strelica levo" id="prethodni">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+
+            <div class="slider-sadrzaj">
+
+                <div class="slider-ikona" id="sliderIkona">
+                    💻
+                </div>
+
+                <div class="slider-info">
+                    <h3 id="sliderNaslov">IT Kabinet 1</h3>
+                    <p id="sliderOpis">
+                        30 računarskih mesta • Najnovija oprema
+                    </p>
+                </div>
+
+                <div class="brojac" id="brojac">
+                    1/5
+                </div>
+
+            </div>
+
+            <button class="strelica desno" id="sledeci">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+        <!-- MINI KARTICE -->
+        <div class="mini-kartice">
+
+            <div class="mini-kartica aktivna-kartica" data-index="0">
+                <div class="mini-ikona">💻</div>
+                <span>IT kabinet 1</span>
+            </div>
+
+            <div class="mini-kartica" data-index="1">
+                <div class="mini-ikona">🖥️</div>
+                <span>IT kabinet 2</span>
+            </div>
+
+            <div class="mini-kartica" data-index="2">
+                <div class="mini-ikona">⚡</div>
+                <span>Elektro lab</span>
+            </div>
+
+            <div class="mini-kartica" data-index="3">
+                <div class="mini-ikona">🤖</div>
+                <span>Mehatronika</span>
+            </div>
+
+            <div class="mini-kartica" data-index="4">
+                <div class="mini-ikona">🔋</div>
+                <span>Energetika</span>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<footer>
+        <div class="footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Adresa: Aleksandra Medvedeva 18, Niš</p>
+                <p>Telefon: 018/588-583</p>
+                <p>Email: <a href="mailto:etstesla@etstesla.ni.ac.rs" target="_blank">etstesla@etstesla.ni.ac.rs</a></p>
+            </div>
+            <div id="korisnilinkovi">
+                <h3>Korisni linkovi</h3>
+                <ul>
+                    <li><a href="onama.html">O školi</a></li>
+                    <li><a href="smerovi.html">Smerovi</a></li>
+                    <li><a href="vesti.html">Vesti</a></li>
+                    <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div id="socijalnemreze">
+    <h3>Pratite nas</h3>
+    
+    <div class="mreze-kontejner">
+        <a class="krug-mreza" href="https://www.facebook.com/teslaets" target="_blank" >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="krug-mrezaig" href="https://www.instagram.com/etstesla/" target="_blank" >
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a class="krug-mrezayt" href="https://www.youtube.com/@mediaetsnikolatesla492" target="_blank" >
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+        </div>
+        <p class="copyright">© 2026 ETS Nikola Tesla Niš. Sva prava zadržana.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/kabineti.js"></script>
+</body>
+</html>

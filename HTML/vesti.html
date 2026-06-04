@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETŠ Nikola Tesla - Vesti | Oficijalni sajt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/vestistyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../Slike/Logo/images-removebg-preview (2) (1).png" type="image/png">
+</head>
+<body>
+
+    <header>
+        <div class="navigacija">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            
+            <ul class="desktop-meni">
+                <li><a href="./index.html">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html">Smerovi</a></li>
+                <li><a href="./vesti.html" class="aktivno">Vesti</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+
+            <div class="hamburger" id="otvori-meni">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div id="fullscreen-meni" class="overlay-meni">
+        <div class="overlay-top">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            <div class="zatvori-meni" id="zatvori-meni">
+                <span>Close</span> <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="./index.html">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html">Smerovi</a></li>
+                <li><a href="./vesti.html" class="aktivno-overlay">Vesti</a></li>
+                <li><a href="./kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="vesti-hero-centrirano">
+        <h1>Vesti</h1>
+        <p>Novosti škole</p>
+    </div>
+
+    <main class="vesti-crna-sekcija">
+        <div class="vesti-kontejner">
+            
+            <div class="vesti-kategorije">
+                <a href="#" class="kat-btn aktivno" data-filter="sve">Sve vesti</a>
+                <a href="#" class="kat-btn" data-filter="takmicenja">Takmičenja</a>
+                <a href="#" class="kat-btn" data-filter="desavanja">Dešavanja</a>
+                <a href="#" class="kat-btn" data-filter="projekti">Projekti</a>
+            </div>
+
+            <div class="vesti-gornji-grid">
+                
+                <article class="vest-istaknuta" data-kategorija="takmicenja">
+                    <a href="./vest-detaljnije.html" class="vest-link-overlay"></a>
+                    <img src="" alt="Velika vest">
+                    <div class="vest-istaknuta-tekst">
+                        <span class="vest-datum">28. Maj 2026.</span>
+                        <h2>Postignut ogroman uspeh na regionalnom takmičenju iz programiranja</h2>
+                    </div>
+                </article>
+
+                <div class="vesti-desna-kolona">
+                    
+                    <article class="vest-vodoravna" data-kategorija="desavanja">
+                        <a href="./vest-detaljnije.html" class="vest-link-overlay"></a>
+                        <img src="" alt="Mala vest">
+                        <div class="vest-vodoravna-tekst">
+                            <span class="vest-datum">25. Maj 2026.</span>
+                            <h3>Otvoren konkurs za upis nove generacije</h3>
+                        </div>
+                    </article>
+
+                    <article class="vest-vodoravna" data-kategorija="projekti">
+                        <a href="./vest-detaljnije.html" class="vest-link-overlay"></a>
+                        <img src="" alt="Mala vest">
+                        <div class="vest-vodoravna-tekst">
+                            <span class="vest-datum">20. Maj 2026.</span>
+                            <h3>Nova oprema u kabinetima elektronike</h3>
+                        </div>
+                    </article>
+
+                    <article class="vest-vodoravna" data-kategorija="takmicenja">
+                        <a href="./vest-detaljnije.html" class="vest-link-overlay"></a>
+                        <img src="" alt="Mala vest">
+                        <div class="vest-vodoravna-tekst">
+                            <span class="vest-datum">15. Maj 2026.</span>
+                            <h3>Održan humanitarni turnir u malom fudbalu</h3>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <div class="vesti-donji-grid">
+                
+                <article class="vest-uspravna" data-kategorija="desavanja">
+                    <a href="./vest-detaljnije.html" class="vest-link-overlay"></a>
+                    <img src="../Slike/vesti-uspravna1.jpg" alt="Uspravna vest">
+                    <div class="vest-uspravna-tekst">
+                        <span class="vest-datum">10. Maj 2026.</span>
+                        <h3>Poseta stručnjaka iz IT industrije našoj školi</h3>
+                        <p>Učenici su imali priliku da slušaju predavanje o najnovijim trendovima u web razvoju.</p>
+                    </div>
+                </article>
+
+                <article class="vest-uspravna" data-kategorija="desavanja">
+                    <a href="./vest-detaljnije.html" class="vest-link-overlay"></a>
+                    <img src="../Slike/vesti-uspravna2.jpg" alt="Uspravna vest">
+                    <div class="vest-uspravna-tekst">
+                        <span class="vest-datum">05. Maj 2026.</span>
+                        <h3>Akcija čišćenja školskog dvorišta</h3>
+                        <p>Volonterska sekcija je uspešno sprovela prolećnu akciju uređenja zelenih površina.</p>
+                    </div>
+                </article>
+
+                <article class="vest-uspravna" data-kategorija="takmicenja">
+                    <a href="./vest-detaljnije.html" class="vest-link-overlay"></a>
+                    <img src="../Slike/vesti-uspravna3.jpg" alt="Uspravna vest">
+                    <div class="vest-uspravna-tekst">
+                        <span class="vest-datum">01. Maj 2026.</span>
+                        <h3>Pobednici školskog hakatona</h3>
+                        <p>Tim učenika treće godine razvio je najbolju aplikaciju za praćenje rasporeda časova.</p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Adresa: Aleksandra Medvedeva 18, Niš</p>
+                <p>Telefon: 018/588-583</p>
+                <p>Email: <a href="mailto:etstesla@etstesla.ni.ac.rs" target="_blank">etstesla@etstesla.ni.ac.rs</a></p>
+            </div>
+            <div id="korisnilinkovi">
+                <h3>Korisni linkovi</h3>
+                <ul>
+                    <li><a href="onama.html">O školi</a></li>
+                    <li><a href="smerovi.html">Smerovi</a></li>
+                    <li><a href="vesti.html">Vesti</a></li>
+                    <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div id="socijalnemreze">
+                <h3>Pratite nas</h3>
+                <div class="mreze-kontejner">
+                    <a class="krug-mreza" href="https://www.facebook.com/teslaets" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="krug-mrezaig" href="https://www.instagram.com/etstesla/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="krug-mrezayt" href="https://www.youtube.com/@mediaetsnikolatesla492" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2026 ETS Nikola Tesla Niš. Sva prava zadržana.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/vesti.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETŠ Nikola Tesla - Skolski sajt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/Smerovi/itstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,80₀;1,9₀&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../Slike/Logo/images-removebg-preview (2) (1).png" type="image/x-icon">
+</head>
+<body>
+
+<header>
+        <div class="navigacija">
+            <a href="../../HTML/index.html"><img src="../../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            
+            <ul class="d-none d-lg-flex">
+                <li><a href="../../HTML/index.html" >Početna</a></li>
+                <li><a href="../../HTML/onama.html" >O školi</a></li>
+                <li><a href="../../HTML/smerovi.html" class="aktivno">Smerovi</a></li>
+                <li><a href="../../HTML/vesti.html">Vesti</a></li>
+                <li><a href="../../HTML/kontakt.html" >Kontakt</a></li>
+            </ul>
+
+            <button class="hamburger-btn d-lg-none" id="otvori-meni">
+                 <i class="fas fa-bars ms-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="fullscreen-meni" class="overlay-meni">
+        <div class="overlay-top">
+            <a href="../../HTML/index.html"><img src="../../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            <div class="zatvori-meni" id="zatvori-meni">
+                <span>Close</span> <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="../../HTML/index.html" >Početna</a></li>
+                <li><a href="../../HTML/onama.html" >O školi</a></li>
+                <li><a href="../../HTML/smerovi.html" class="aktivno-overlay">Smerovi</a></li>
+                <li><a href="../../HTML/vesti.html">Vesti</a></li>
+                <li><a href="../../HTML/kontakt.html" >Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+<!-- HERO SEKCIJA -->
+<section class="smer-hero">
+    <div class="smer-hero-sadrzaj">
+        <div class="smer-hero-levo">
+            <p class="breadcrumb">Početna &rsaquo; Smerovi &rsaquo; <span>Električar</span></p>
+            <h1>Električar</h1>
+            <div class="smer-hero-tagovi">
+                <span class="hero-tag">3 godine</span>
+                <span class="hero-tag">III stepen</span>
+                <span class="hero-tag">14 mesta</span>
+                <span class="hero-tag">1 odeljenje</span>
+            </div>
+        </div>
+        <div class="smer-info-kartica">
+            <h4>INFORMACIJE O SMERU</h4>
+            <div class="info-red">
+                <span class="info-label">Trajanje</span>
+                <span class="info-vrednost">3 godine</span>
+            </div>
+            <div class="info-red">
+                <span class="info-label">Stepen</span>
+                <span class="info-vrednost plavo">III stepen</span>
+            </div>
+            <div class="info-red">
+                <span class="info-label">Broj mesta</span>
+                <span class="info-vrednost plavo">14 učenika</span>
+            </div>
+            <div class="info-red">
+                <span class="info-label">Min. bodova (2025)</span>
+                <span class="info-vrednost">49.39</span>
+            </div>
+            <div class="info-red">
+                <span class="info-label">Šifra profila</span>
+                <span class="info-vrednost">NICK SA 3E19S</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BODOVI SEKCIJA -->
+<section class="smer-sekcija">
+    <h2 class="sekcija-naslov">Minimalni bodovi za upis - poslednje 3 godine</h2>
+    <div class="bodovi-grid">
+        <div class="bod-kartica">
+            <p class="bod-godina">2022/2023</p>
+            <p class="bod-broj">47.66</p>
+            <p class="bod-label">min.bodova</p>
+        </div>
+        <div class="bod-kartica">
+            <p class="bod-godina">2023/2024</p>
+            <p class="bod-broj">48.73</p>
+            <p class="bod-label">min.bodova</p>
+        </div>
+        <div class="bod-kartica aktivan">
+            <p class="bod-godina">2024/2025</p>
+            <p class="bod-broj plavo">49.39</p>
+            <p class="bod-label">min.bodova</p>
+        </div>
+    </div>
+</section>
+
+<!-- PREDMETI SEKCIJA -->
+<section class="smer-sekcija">
+    <h2 class="sekcija-naslov">Stručni predmeti po razredima</h2>
+    <div class="predmeti-grid">
+        <div class="razred-kolona">
+            <h4 class="razred-naslov">I RAZRED</h4>
+            <ul class="predmeti-lista">
+                <li>Električna instalacija</li>
+                <li>Osnove elektrotehnike</li>
+                <li>Osnove praktičnih veština</li>
+                <li>Informatika i računarstvo</li>
+                <li>Tehničko crtanje i dokumentacija</li>
+                <li>Ekologija</li>
+                <li>Elektronika</li>
+            </ul>
+        </div>
+        <div class="razred-kolona">
+            <h4 class="razred-naslov">II RAZRED</h4>
+            <ul class="predmeti-lista">
+                <li>Elektronska merenja i elektronika</li>
+                <li>Osnove elektrotehnike</li>
+                <li>Merenja električnih i neelektričnih veličina</li>
+                <li>Sw alati u elektroenergetici</li>
+                <li>Električne instalacije</li>
+                <li>Praktična nastava</li>
+                <li>Električne mašine i pogoni</li>
+            </ul>
+        </div>
+        <div class="razred-kolona">
+            <h4 class="razred-naslov">III RAZRED</h4>
+            <ul class="predmeti-lista">
+                <li>Elektroenergetski vodovi</li>
+                <li>Električne instalacije</li>
+                <li>Preduzetništvo</li>
+                <li>Električna oprema</li>
+            </ul>
+        </div>
+        <div class="razred-kolona">
+            <h4 class="razred-naslov">IV RAZRED</h4>
+            <ul class="predmeti-lista">
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- VEŠTINE SEKCIJA -->
+<section class="smer-sekcija">
+    <h2 class="sekcija-naslov">Veštine koje stičeš</h2>
+    <div class="vestine-grid">
+        <div class="vestina-item">
+            <div class="vestina-ikona">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <span>Električne instalacije u zgradama</span>
+        </div>
+        <div class="vestina-item">
+            <div class="vestina-ikona">
+                <i class="fas fa-wrench"></i>
+            </div>
+            <span>Održavanje elektro opreme</span>
+        </div>
+        <div class="vestina-item">
+            <div class="vestina-ikona">
+                <i class="fas fa-ruler"></i>
+            </div>
+            <span>Merenja i ispitivanja</span>
+        </div>
+        <div class="vestina-item">
+            <div class="vestina-ikona">
+                <i class="fas fa-eye"></i>
+            </div>
+            <span>Čitanje elektro crteža i šema</span>
+        </div>
+        <div class="vestina-item">
+            <div class="vestina-ikona">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <span>Zaštita na radu</span>
+        </div>
+        <div class="vestina-item">
+            <div class="vestina-ikona">
+                <i class="fas fa-tools"></i>
+            </div>
+            <span>Servisiranje elektro uređaja</span>
+        </div>
+    </div>
+</section>
+
+<!-- NAKON ZAVRŠETKA -->
+<section class="smer-sekcija">
+    <h2 class="sekcija-naslov-centar">Nakon završetka</h2>
+    <div class="nakon-grid">
+        <div class="nakon-kartica">
+            <div class="nakon-naslov">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Dalje školovanje</span>
+            </div>
+            <ul class="nakon-lista">
+                <li>Elektronski fakultet Niš</li>
+                <li>Fakultet tehničkih nauka</li>
+                <li>Viša stručna IT škola</li>
+            </ul>
+        </div>
+        <div class="nakon-kartica">
+            <div class="nakon-naslov">
+                <i class="fas fa-briefcase"></i>
+                <span>Zapošljavanje</span>
+            </div>
+            <ul class="nakon-lista">
+                <li>Računarski tehničar</li>
+                <li>Serviser računara</li>
+                <li>Mrežni administrator</li>
+                <li>Sistemski tehničar</li>
+            </ul>
+        </div>
+
+        <div class="nakon-kartica">
+            <div class="nakon-naslov">
+                <i class="fas fa-info-circle"></i>
+                <span>Dualno obrazovanje</span>
+            </div>
+            <ul class="nakon-lista">
+                <li>Praktična nastava kod partnera (9 do 14 mesta)</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- UPIŠI ME DUGME -->
+<section class="smer-sekcija upis-sekcija">
+    <button class="upis-dugme" id="OtvoriModal">UPIŠI ME</button>
+</section>
+
+<!-- MODAL (tvoj postojeći) -->
+<div id="Modal" class="ModalPozadina">
+    <div class="ModalSadrzaj">
+        <h3 id="ZatvoriModal" class="ZatvoriIks">&times;</h3>
+        <h2>Kako se upisati?</h2>
+        <ul>
+            <li>Položi završni ispit</li>
+            <li>Prijavi se na <a href="https://mojasrednjaskola.gov.rs" target="_blank">mojasrednjaskola.gov.rs</a></li>
+            <li>Unesi šifru smera: <strong>NICK SA 3E19S</strong></li>
+            <li>Čekaj rezultate</li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+        <div class="footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Adresa: Aleksandra Medvedeva 18, Niš</p>
+                <p>Telefon: 018/588-583</p>
+                <p>Email: <a href="mailto:etstesla@etstesla.ni.ac.rs" target="_blank">etstesla@etstesla.ni.ac.rs</a></p>
+            </div>
+            <div id="korisnilinkovi">
+                <h3>Korisni linkovi</h3>
+                <ul>
+                    <li><a href="/HTML/onama.html">O školi</a></li>
+                    <li><a href="/HTML/smerovi.html">Smerovi</a></li>
+                    <li><a href="/HTML/vesti.html">Vesti</a></li>
+                    <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div id="socijalnemreze">
+    <h3>Pratite nas</h3>
+    
+    <div class="mreze-kontejner">
+        <a class="krug-mreza" href="https://www.facebook.com/teslaets" target="_blank" >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="krug-mrezaig" href="https://www.instagram.com/etstesla/" target="_blank" >
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a class="krug-mrezayt" href="https://www.youtube.com/@mediaetsnikolatesla492" target="_blank" >
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+        </div>
+        <p class="copyright">© 2026 ETS Nikola Tesla Niš. Sva prava zadržana.</p>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../JS/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGACIJA (HEADER) --- */
+header {
+    background-color: #072450;
+    padding: 20px 0; /* Malo sam smanjio padding da header bude elegantniji pri skrolu */
+    position: fixed; /* OVO je ključno - drži ga uvek na vrhu */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header.skrolovan {
+    background-color: #0d385c;
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navigacija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.navigacija img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.navigacija ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigacija ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.navigacija ul li a:hover {
+    color: #3C9DD0;
+}
+
+.navigacija ul li a.aktivno {
+    color: #3C9DD0;
+}
+
+.breadcrumb {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #3C9DD0;
+    font-weight: 500;
+}
+
+
+
+/* =========================================
+   MODERNA OPREMA
+========================================= */
+
+.oprema-hero {
+    background: linear-gradient(135deg, #0d2d5e 0%, #1a3a6b 100%);
+    padding: 180px 0 80px 0;
+    text-align: center;
+}
+
+.oprema-hero-sadrzaj {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.oprema-hero h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.oprema-hero .hero-podnaslov {
+    color: #a0badd;
+}
+
+.oprema-glavna-sekcija {
+    padding: 70px 0;
+}
+
+.oprema-kontejner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.oprema-naslov {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.oprema-tag {
+    color: #3C9DD0;
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.oprema-naslov h2 {
+    color: #072450;
+    font-size: 2rem;
+}
+
+/* =========================================
+   FILTERI
+========================================= */
+
+.filter-dugmad {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter {
+    border: none;
+    background: transparent;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-family: Poppins;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter:hover {
+    background: #eef3fa;
+}
+
+.filter.aktivan {
+    background: #2d417d;
+    color: white;
+}
+
+/* =========================================
+   GLAVNI SLIDER
+========================================= */
+
+.slider-kontejner {
+    background: #2d417d;
+    border-radius: 18px;
+    min-height: 300px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 40px;
+}
+
+.slider-sadrzaj {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    transition: opacity 0.3s ease;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.slider-ikona {
+    font-size: 90px;
+    margin-bottom: 25px;
+}
+
+.slider-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.slider-info p {
+    color: #b7c6e6;
+}
+
+/* =========================================
+   STRELICE
+========================================= */
+
+.strelica {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.3);
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.strelica:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.levo {
+    left: 25px;
+}
+
+.desno {
+    right: 25px;
+}
+
+/* =========================================
+   BROJAC
+========================================= */
+
+.brojac {
+    position: absolute;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #0e1f52;
+
+    padding: 8px 16px;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   MINI KARTICE
+========================================= */
+
+.mini-kartice {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.mini-kartica {
+    background: #2d417d;
+    color: white;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    padding: 20px 10px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.mini-kartica:hover {
+    transform: translateY(-4px);
+}
+
+.aktivna-kartica {
+    border: 3px solid #3C9DD0;
+}
+
+.mini-ikona {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.mini-kartica span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width: 900px){
+
+    .mini-kartice{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .slider-ikona{
+        font-size:70px;
+    }
+
+    .slider-info h3{
+        font-size:1.5rem;
+    }
+}
+
+@media(max-width:600px){
+
+    .mini-kartice{
+        grid-template-columns:1fr;
+    }
+
+    .filter-dugmad{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: #061c30;
+    color: #ffffff;
+    padding: 60px 10% 20px 10%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer div {
+    flex: 1;
+}
+
+.footer h3 {
+    color: #3C9DD0;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3C9DD0;
+    display: inline-block;
+}
+
+.footer p, .footer ul li {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+
+
+.footer ul li a:hover {
+    color: #3C9DD0;
+}
+
+/* --- IKONE SOCIJALNIH MREŽA --- */
+
+/* Poređaj krugove horizontalno sa razmakom */
+/* --- IKONE SOCIJALNIH MREŽA --- */
+.mreze-kontejner {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
+.krug-mreza, .krug-mrezaig, .krug-mrezayt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 45px;            
+    height: 45px;           
+    background-color: #ffffff; /* Bela pozadina kruga */
+    border-radius: 50%;     
+    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+/* Podešavanje same IKONICE unutar kruga */
+.krug-mreza i, .krug-mrezaig, .krug-mrezayt {
+    font-size: 20px;          /* Veličina ikonice */
+    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    transition: color 0.3s ease;
+}
+
+/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
+.krug-mreza:hover {
+    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+.krug-mrezayt:hover {
+    background-color: #FF0000;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+.krug-mrezaig:hover {
+    background-color: #E1306C;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+/* ...a ikonica unutar njega u isto vreme postane bela */
+.krug-mreza:hover i {
+    color: #ffffff;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Hamburger ikona po defaultu sakrivena na velikim ekranima */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+    color: #3C9DD0;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px; /* Povećano da bude uočljivije */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+    color: #3C9DD0; /* Plava boja pri hoveru */
+    transform: scale(1.05);
+}
+
+.hamburger-btn i {
+    font-size: 28px; /* Sama ikonica (bars) malo veća */
+    margin-left: 8px;
+}
+
+/* =========================================
+   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
+   ========================================= */
+.overlay-meni {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(7, 36, 80, 0.98);
+    z-index: 9999; 
+    display: flex;
+    flex-direction: column;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); 
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.overlay-meni.otvoren {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.overlay-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.overlay-top img {
+    height: 50px;
+}
+
+.zatvori-meni {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.zatvori-meni:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.overlay-nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 10%; 
+}
+
+.overlay-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay-nav ul li {
+    margin: 15px 0;
+}
+
+.overlay-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3.5rem; 
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.overlay-nav ul li a:hover,
+.overlay-nav ul li a.aktivno-overlay {
+    color: #4a90e2; 
+}
+
+@media (max-width: 768px) {
+    .mini-kartice {
+        display: none !important; /* Ovo ih potpuno uklanja na telefonu */
+    }
+
+    /* Povezivanje hamburger dugmeta sa stilovima */
+    .d-lg-none {
+        display: flex !important;
+    }
+    .d-none {
+        display: none !important;
+    }
+
+    /* Footer organizacija */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .mreze-kontejner {
+        justify-content: center;
+    }
+    
+    .plavisloj h1 {
+        font-size: 38px;
+    }
+}
+
+/* Osnovna klasa za hamburger dugme (ako već nemaš) */
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* Skriveno na desktopu */
+}

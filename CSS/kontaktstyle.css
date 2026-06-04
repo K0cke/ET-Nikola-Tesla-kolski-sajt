@@ -1,0 +1,631 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGACIJA (HEADER) --- */
+header {
+    background-color: #072450; 
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header.skrolovan {
+    background-color: #0d385c;
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navigacija {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 10%;
+}
+
+.navigacija img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.navigacija ul {
+    display: flex;
+    gap: 40px;
+    list-style: none !important;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigacija ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.navigacija ul li a:hover {
+    color: #3C9DD0;
+}
+
+.navigacija ul li a.aktivno {
+    color: #3C9DD0;
+}
+
+
+/* ==========================================================================
+   1. BANER / HERO SEKCIJA (Tekst na sredini, prilagođeno fiksnom headeru)
+   ========================================================================== */
+.kontakt-hero {
+    background-color:  #092244;; 
+    padding: 220px 0 140px 0;  /* Pravi prostor ispod fiksnog headera, tekst ostaje u sredini */
+    text-align: center;        
+    width: 100%; 
+}
+
+.kontakt-hero h1 {
+    color: #ffffff; 
+    font-size: 36px; 
+    margin: 10px 0 0 0;        
+    font-weight: bold; 
+}
+
+.breadcrumbs {
+    font-size: 14px; 
+    color: #ffffff; 
+    margin: 0;
+}
+
+.breadcrumbs strong {
+    color: #4da3ff; 
+    font-weight: normal; 
+}
+
+/* ==========================================================================
+   2. GLAVNI KONTEJNER (Dve paralelne kolone preko Flexbox-a)
+   ========================================================================== */
+.kontakt-glavni-kontejner {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Obe kolone stoje jedna pored druge (45% i 50%) */
+.kontakt-kolona-info {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.kontakt-kolona-forma {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.kontakt-sekcija-naslov {
+    color: #0d3b66;
+    font-size: 22px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #3a86c8;
+    padding-bottom: 8px;
+}
+
+/* ==========================================================================
+   3. LEVA KOLONA: KONTAKT INFO & INTERAKTIVNA MAPA
+   ========================================================================== */
+.info-lista {
+    margin-bottom: 30px;
+}
+
+.info-stavka {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ikonica-kontakt {
+    color: #0d3b66;
+    font-size: 20px;
+    margin-right: 15px;
+    width: 25px; 
+    text-align: center;
+}
+
+.info-labela {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.info-vrednost {
+    font-size: 16px;
+    color: #0d3b66;
+    font-weight: bold;
+    margin: 2px 0 0 0;
+}
+
+.info-vrednost a {
+    color: #0d3b66;
+    text-decoration: none;
+}
+
+.info-vrednost a:hover {
+    text-decoration: underline;
+}
+
+/* Stilovi za živu Google mapu */
+.kontakt-mapa {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.kontakt-mapa iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    display: block;
+}
+
+/* ==========================================================================
+   4. DESNA KOLONA: CRNA POLJA ZA FORMU (INPUTS)
+   ========================================================================== */
+.forma-grupa {
+    margin-bottom: 15px;
+}
+
+.oznaka-polja {
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.forma-red-dva {
+    display: flex;
+    gap: 15px;
+}
+
+.forma-red-dva .forma-grupa {
+    flex: 1;
+}
+
+.kontakt-forma input, 
+.kontakt-forma select, 
+.kontakt-forma textarea {
+    width: 100%;
+    background-color: #111111; 
+    color: #ffffff; 
+    border: 1px solid #333;
+    padding: 12px 15px;
+    font-size: 14px;
+    border-radius: 8px; 
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.kontakt-forma input::placeholder, 
+.kontakt-forma textarea::placeholder {
+    color: #888888;
+}
+
+.kontakt-forma input:focus, 
+.kontakt-forma select:focus, 
+.kontakt-forma textarea:focus {
+    outline: none;
+    border-color: #3a86c8; 
+}
+
+.kontakt-forma textarea {
+    resize: vertical;
+}
+
+.btn-potvrdi {
+    background-color: #3a86c8; 
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.btn-potvrdi:hover {
+    background-color: #2a72b0; 
+}
+
+
+
+
+
+footer {
+    background-color: #061c30;
+    color: #ffffff;
+    padding: 60px 10% 20px 10%;
+    margin-top: 10%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer div {
+    flex: 1;
+}
+
+.footer h3 {
+    color: #3C9DD0;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3C9DD0;
+    display: inline-block;
+}
+
+.footer p, .footer ul li {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+
+
+.footer ul li a:hover {
+    color: #3C9DD0;
+}
+
+/* --- IKONE SOCIJALNIH MREŽA --- */
+
+/* Poređaj krugove horizontalno sa razmakom */
+/* --- IKONE SOCIJALNIH MREŽA --- */
+.mreze-kontejner {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
+.krug-mreza, .krug-mrezaig, .krug-mrezayt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 45px;            
+    height: 45px;           
+    background-color: #ffffff; /* Bela pozadina kruga */
+    border-radius: 50%;     
+    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+/* Podešavanje same IKONICE unutar kruga */
+.krug-mreza i, .krug-mrezaig, .krug-mrezayt {
+    font-size: 20px;          /* Veličina ikonice */
+    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    transition: color 0.3s ease;
+}
+
+/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
+.krug-mreza:hover {
+    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+.krug-mrezayt:hover {
+    background-color: #FF0000;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+.krug-mrezaig:hover {
+    background-color: #E1306C;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+/* ...a ikonica unutar njega u isto vreme postane bela */
+.krug-mreza:hover i {
+    color: #ffffff;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+
+
+/* ==========================================================================
+   DODATAK ZA HARVARD MENI, TOAST I RESPONSIVE
+   ========================================================================== */
+
+/* Hamburger dugme za mobilni */
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px; /* Povećano da bude uočljivije */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+    color: #3C9DD0; /* Plava boja pri hoveru */
+    transform: scale(1.05);
+}
+
+.hamburger-btn i {
+    font-size: 28px; /* Sama ikonica (bars) malo veća */
+    margin-left: 8px;
+}
+
+/* =========================================
+   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
+   ========================================= */
+.overlay-meni {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(7, 36, 80, 0.98);
+    z-index: 9999; 
+    display: flex;
+    flex-direction: column;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); 
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.overlay-meni.otvoren {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.overlay-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.overlay-top img {
+    height: 50px;
+}
+
+.zatvori-meni {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.zatvori-meni:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.overlay-nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 10%; 
+}
+
+.overlay-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay-nav ul li {
+    margin: 15px 0;
+}
+
+.overlay-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3.5rem; 
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.overlay-nav ul li a:hover,
+.overlay-nav ul li a.aktivno-overlay {
+    color: #4a90e2; 
+}
+
+@media (max-width: 768px) {
+    .overlay-nav ul li a {
+        font-size: 2.5rem; 
+    }
+}
+
+/* --- RESPONSIVE PRAVILA ZA HEADERE I MENI --- */
+header .navigacija ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 40px !important;
+    align-items: center !important;
+}
+
+header .navigacija ul li a {
+    text-decoration: none !important;
+}
+
+@media (max-width: 992px) {
+    header .navigacija ul {
+        display: none !important; 
+    }
+    
+    .hamburger-btn {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .kontakt-glavni-kontejner {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        padding: 20px 15px !important;
+        gap: 40px !important;
+        margin: 30px auto;
+    }
+
+    .kontakt-kolona-info, 
+    .kontakt-kolona-forma {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .forma-red-dva {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .forma-red-dva input {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #otvori-meni {
+        display: none !important;
+    }
+}
+
+/* --- TOAST PORUKA --- */
+#uspehToast {
+    display: none !important; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#uspehToast.show {
+    display: block !important; 
+}
+
+/* --- MOBILNI PRIKAZ (do 768px širine) --- */
+@media (max-width: 768px) {
+    .kontakt-glavni-kontejner {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .kontakt-kolona-info, 
+    .kontakt-kolona-forma {
+        width: 90%; 
+        max-width: 500px; 
+        margin: 0 auto;
+    }
+
+    .info-lista {
+        text-align: left; 
+        margin-bottom: 30px;
+    }
+
+    .kontakt-forma {
+        width: 100%;
+        text-align: left; 
+    }
+
+    .forma-grupa input, 
+    .forma-grupa select, 
+    .forma-grupa textarea {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+    .btn-potvrdi {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;    
+        text-align: center;     
+        padding: 20px;          
+        width: 100%;            
+        box-sizing: border-box; 
+    }
+
+    .footer div {
+        width: 100%;            
+        margin-bottom: 20px;    
+    }
+
+    .mreze-kontejner {
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        gap: 20px;               
+        width: 100%;
+        margin-top: 10px;        
+    }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETŠ Nikola Tesla - Kontakt | Oficijalni sajt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/kontaktstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Slike/Logo/images-removebg-preview (2) (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="navigacija">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            
+            <ul class="d-none d-lg-flex">
+                <li><a href="./index.html">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html">Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" class="aktivno">Kontakt</a></li>
+            </ul>
+
+            <button class="hamburger-btn d-lg-none" id="otvori-meni">
+         <i class="fas fa-bars ms-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="fullscreen-meni" class="overlay-meni">
+        <div class="overlay-top">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            <div class="zatvori-meni" id="zatvori-meni">
+                <span>Close</span> <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="./index.html">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html">Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" class="aktivno-overlay">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="kontakt-hero">
+        <p class="breadcrumbs">Početna > <strong>Kontakt</strong></p>
+        <h1>Kontakt</h1>
+    </div>
+
+    <div class="kontakt-glavni-kontejner">
+        
+        <div class="kontakt-kolona-info">
+            <h2 class="kontakt-sekcija-naslov">Kontakt informacije</h2>
+            
+            <div class="info-lista">
+                <div class="info-stavka">
+                    <i class="fas fa-map-marker-alt ikonica-kontakt"></i>
+                    <div class="info-tekst">
+                        <p class="info-labela">Adresa</p>
+                        <p class="info-vrednost">Aleksandra Medvedeva 14, Niš</p>
+                    </div>
+                </div>
+
+                <div class="info-stavka">
+                    <i class="fas fa-phone-alt ikonica-kontakt"></i>
+                    <div class="info-tekst">
+                        <p class="info-labela">Telefon</p>
+                        <p class="info-vrednost"><a href="tel:018588583">018/588-583</a></p>
+                    </div>
+                </div>
+
+                <div class="info-stavka">
+                    <i class="fas fa-envelope ikonica-kontakt"></i>
+                    <div class="info-tekst">
+                        <p class="info-labela">E-mail</p>
+                        <p class="info-vrednost"><a href="mailto:etstesla@etstesla.ni.ac.rs">etstesla@etstesla.ni.ac.rs</a></p>
+                    </div>
+                </div>
+
+                <div class="info-stavka">
+                    <i class="fas fa-clock ikonica-kontakt"></i>
+                    <div class="info-tekst">
+                        <p class="info-labela">Radno vreme</p>
+                        <p class="info-vrednost">Ponedeljak - Petak <strong>07:00 - 20:00</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kontakt-mapa">
+                <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.1397441589133!2d21.89297617663242!3d43.3328120734005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4755b0a33c2a3811%3A0xa97f2122616f73e9!2sAleksandra%20Medvedeva%2018%2C%20Ni%C5%A1!5e0!3m2!1ssr!2srs!4v1715978400000!5m2!1ssr!2srs" 
+                 width="100%" 
+                 height="350" 
+                 style="border:0;" 
+                 allowfullscreen="" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="kontakt-kolona-forma">
+            <h2 class="kontakt-sekcija-naslov">Pošalji poruku</h2>
+            
+            <form class="kontakt-forma" id="kontaktForma" action="#" method="POST">
+                <div class="forma-red-dva">
+                    <div class="forma-grupa">
+                        <p class="oznaka-polja">IME</p>
+                        <input type="text" id="ime" name="ime" placeholder="Vaše ime" required>
+                    </div>
+                    <div class="forma-grupa">
+                        <p class="oznaka-polja">PREZIME</p>
+                        <input type="text" id="prezime" name="prezime" placeholder="Vaše prezime" required>
+                    </div>
+                </div>
+
+                <div class="forma-grupa">
+                    <p class="oznaka-polja">EMAIL ADRESA</p>
+                    <input type="email" id="email" name="email" placeholder="vas@email.com" required>
+                </div>
+
+                <div class="forma-grupa">
+                    <p class="oznaka-polja">TEMA PORUKE</p>
+                    <select id="tema" name="tema" required>
+                        <option value="" disabled selected>Izaberite temu...</option>
+                        <option value="upis">Upis učenika</option>
+                        <option value="smerovi">Informacije o smerovima</option>
+                        <option value="opste">Opšta pitanja</option>
+                        <option value="nasilje">Prijavite nasilje</option>
+                        <option value="partner">Kako postati partner?</option>
+                    </select>
+                </div>
+
+                <div class="forma-grupa">
+                    <p class="oznaka-polja">PORUKA</p>
+                    <textarea id="poruka" name="poruka" rows="6" placeholder="Napišite Vašu poruku..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-potvrdi">POTVRDI</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11000;">
+        <div id="uspehToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body py-3 fs-6">
+                    <i class="fas fa-check-circle me-2"></i> Poruka je uspešno poslata!
+                </div>
+                <button type="button" class="btn-close btn-close-white m-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Adresa: Aleksandra Medvedeva 18, Niš</p>
+                <p>Telefon: 018/588-583</p>
+                <p>Email: <a href="mailto:etstesla@etstesla.ni.ac.rs" target="_blank">etstesla@etstesla.ni.ac.rs</a></p>
+            </div>
+            <div id="korisnilinkovi">
+                <h3>Korisni linkovi</h3>
+                <ul>
+                    <li><a href="onama.html">O školi</a></li>
+                    <li><a href="smerovi.html">Smerovi</a></li>
+                    <li><a href="vesti.html">Vesti</a></li>
+                    <li><a href="./kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div id="socijalnemreze">
+                <h3>Pratite nas</h3>
+                <div class="mreze-kontejner">
+                    <a class="krug-mreza" href="https://www.facebook.com/teslaets" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="krug-mrezaig" href="https://www.instagram.com/etstesla/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="krug-mrezayt" href="https://www.youtube.com/@mediaetsnikolatesla492" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2026 ETS Nikola Tesla Niš. Sva prava zadržana.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/kontakt.js"></script>
+</body>
+</html>

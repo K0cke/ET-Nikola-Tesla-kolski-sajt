@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETŠ Nikola Tesla - Smerovi | Oficijalni sajt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/smerovistyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Slike/Logo/images-removebg-preview (2) (1).png" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="navigacija">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            
+            <ul class="d-none d-lg-flex">
+                <li><a href="./index.html">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html">Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" class="aktivno">Kontakt</a></li>
+            </ul>
+
+            <button class="hamburger-btn d-lg-none" id="otvori-meni">
+                 <i class="fas fa-bars ms-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="fullscreen-meni" class="overlay-meni">
+        <div class="overlay-top">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            <div class="zatvori-meni" id="zatvori-meni">
+                <span>Close</span> <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="./index.html">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html" class="aktivno-overlay">Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" >Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="smerovi-hero">
+        <p class="breadcrumbs">Početna &gt; <strong>Smerovi</strong></p>
+        <h1>Smerovi</h1>
+    </div>
+
+  <section class="smerovi-sekcija">
+    <div class="naslov-sekcije">
+        <h2 class="sekcija-nadnaslov">Obrazovni profili</h2>
+        <h2 class="sekcija-glavni-naslov">Svih 7 smerova</h2>
+    </div>
+
+    <div class="smer-lista">
+        <a href="../HTML/Smerovi/it.html" class="smer-link">
+        <div class="smer-kartica">
+            <div class="smer-slika-kontejner">
+                <img src="../Slike/Smerovi/IT.jpg" alt="Tehničar IT">
+                <div class="plavi-overlay"></div>
+            </div>
+            <div class="smer-sadrzaj">
+                <h3>Tehničar informacionih tehnologija</h3>
+                <p class="smer-opis">Smer koji te priprema za svet programiranja, mreža i savremenih tehnologija. Učiš programske jezike, baze podataka i izradu softvera.</p>
+                <div class="smer-tagovi">
+                    <span>Programiranje</span> <span>Mreže</span> <span>Baze podataka</span>
+                </div>
+                <p class="smer-meta">Trajanje: 4 godine · Diploma: IV stepen</p>
+            </div>
+        </div>
+        </a>
+        
+        
+        <a href="../HTML/Smerovi/etr.html" class="smer-link">
+        <div class="smer-kartica">
+            <div class="smer-slika-kontejner">
+                <img src="../Slike/Smerovi/ETR.png" alt="Elektrotehničar računara" class="smer-slika">
+                <div class="plavi-overlay"></div>
+            </div>
+            <div class="smer-sadrzaj">
+                <h3>Elektrotehničar računara</h3>
+                <p class="smer-opis">Fokus na hardver, operativne sisteme i računarske mreže. Osposobljava te za instalaciju, održavanje i podešavanje računarskih sistema.</p>
+                <div class="smer-tagovi">
+                    <span class="smer-tag">Hardver</span>
+                    <span class="smer-tag">OS</span>
+                    <span class="smer-tag">Servisiranje</span>
+                </div>
+                <p class="smer-meta">Trajanje: 4 godine · Diploma: IV stepen</p>
+            </div>
+        </div>
+        </a>
+
+
+        <a href="../HTML/Smerovi/tm.html" class="smer-link">
+        <div class="smer-kartica">
+            <div class="smer-slika-kontejner">
+                <img src="../Slike/Smerovi/TMHTR.png" alt="Tehničar mehatronike" class="smer-slika">
+                <div class="plavi-overlay"></div>
+            </div>
+            <div class="smer-sadrzaj">
+                <h3>Tehničar mehatronike</h3>
+                <p class="smer-opis">Kombinacija mehanike, elektronike i računarstva. Idealan smer za one koji žele da rade sa robotima, automatizacijom i industrijskim sistemima.</p>
+                <div class="smer-tagovi">
+                    <span class="smer-tag">Robotika</span>
+                    <span class="smer-tag">Automatizacija</span>
+                    <span class="smer-tag">PLC</span>
+                </div>
+                <p class="smer-meta">Trajanje: 4 godine · Diploma: IV stepen</p>
+            </div>
+        </div>
+        </a>
+
+
+         <a href="../HTML/Smerovi/ee.html" class="smer-link">
+        <div class="smer-kartica">
+            
+            <div class="smer-slika-kontejner">
+                <img src="../Slike/Smerovi/EE.png" alt="Elektrotehničar energetike" class="smer-slika">
+                <div class="plavi-overlay"></div>
+            </div>
+            <div class="smer-sadrzaj">
+                <h3>Elektrotehničar energetike</h3>
+                <p class="smer-opis">Bavi se proizvodnjom, prenosom i distribucijom električne energije. Priprema te za rad u elektrodistribuciji i energetskim postrojenjima.</p>
+                <div class="smer-tagovi">
+                    <span class="smer-tag">Energija</span>
+                    <span class="smer-tag">Elektrane</span>
+                    <span class="smer-tag">Distribucija</span>
+                </div>
+                <p class="smer-meta">Trajanje: 4 godine · Diploma: IV stepen</p>
+            </div>
+        </div>
+        </a>
+
+
+        <a href="../HTML/Smerovi/toie.html" class="smer-link">
+        <div class="smer-kartica">
+            <div class="smer-slika-kontejner">
+                <img src="../Slike/Smerovi/TSP.jpg" alt="Tehničar obnovljivih izvora" class="smer-slika">
+                <div class="plavi-overlay"></div>
+            </div>
+            <div class="smer-sadrzaj">
+                <h3>Tehničar obnovljivih izvora energije</h3>
+                <p class="smer-opis">Smer budućnosti — solarna energija, vetroelektrane i hidroelektrane. Priprema te za zelenu ekonomiju i energetsku tranziciju.</p>
+                <div class="smer-tagovi">
+                    <span class="smer-tag">Solarni paneli</span>
+                    <span class="smer-tag">Vetar</span>
+                    <span class="smer-tag">Zelena energija</span>
+                </div>
+                <p class="smer-meta">Trajanje: 4 godine · Diploma: IV stepen</p>
+            </div>
+        </div>
+        </a>
+
+
+        <a href="../HTML/Smerovi/e.html" class="smer-link">
+        <div class="smer-kartica">
+            <div class="smer-slika-kontejner">
+                <img src="../Slike/Smerovi/EL.png" alt="Električar" class="smer-slika">
+                <div class="plavi-overlay"></div>
+            </div>
+            <div class="smer-sadrzaj">
+                <h3>Električar</h3>
+                <p class="smer-opis">Trogodišnji smer koji te osposobljava za električne instalacije, održavanje i popravku elektro opreme u stambenim i poslovnim objektima.</p>
+                <div class="smer-tagovi">
+                    <span class="smer-tag">Instalacije</span>
+                    <span class="smer-tag">Održavanje</span>
+                    <span class="smer-tag">Elektro oprema</span>
+                </div>
+                <p class="smer-meta">Trajanje: 3 godine · Diploma: III stepen</p>
+            </div>
+        </div>
+        </a>
+
+
+        <a href="../HTML/Smerovi/emip.html" class="smer-link">
+        <div class="smer-kartica">
+            <div class="smer-slika-kontejner">
+                <img src="../Slike/Smerovi/EMIP.png" alt="Elektromonter mreža" class="smer-slika">
+                <div class="plavi-overlay"></div>
+            </div>
+            <div class="smer-sadrzaj">
+                <h3>Elektromonter mreža i postrojenja</h3>
+                <p class="smer-opis">Osposobljava te za montažu, održavanje i popravku elektroenergetskih mreža i postrojenja. Rad na terenu i u postrojenjima elektrodistribucije.</p>
+                <div class="smer-tagovi">
+                    <span class="smer-tag">Dalekovodi</span>
+                    <span class="smer-tag">Trafostanice</span>
+                    <span class="smer-tag">Montaža</span>
+                </div>
+                <p class="smer-meta">Trajanje: 3 godine · Diploma: III stepen</p>
+            </div>
+        </div>
+        </a>
+
+    </div>
+</section>
+
+
+
+<footer>
+        <div class="footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Adresa: Aleksandra Medvedeva 18, Niš</p>
+                <p>Telefon: 018/588-583</p>
+                <p>Email: <a href="mailto:etstesla@etstesla.ni.ac.rs" target="_blank">etstesla@etstesla.ni.ac.rs</a></p>
+            </div>
+            <div id="korisnilinkovi">
+                <h3>Korisni linkovi</h3>
+                <ul>
+                    <li><a href="/HTML/onama.html">O školi</a></li>
+                    <li><a href="/HTML/smerovi.html">Smerovi</a></li>
+                    <li><a href="/HTML/vesti.html">Vesti</a></li>
+                    <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div id="socijalnemreze">
+    <h3>Pratite nas</h3>
+    
+    <div class="mreze-kontejner">
+        <a class="krug-mreza" href="https://www.facebook.com/teslaets" target="_blank" >
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="krug-mrezaig" href="https://www.instagram.com/etstesla/" target="_blank" >
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a class="krug-mrezayt" href="https://www.youtube.com/@mediaetsnikolatesla492" target="_blank" >
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+</div>
+        </div>
+        <p class="copyright">© 2026 ETS Nikola Tesla Niš. Sva prava zadržana.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

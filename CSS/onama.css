@@ -1,0 +1,648 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGACIJA (HEADER) --- */
+header {
+    background-color: #072450; 
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header.skrolovan {
+    background-color: #0d385c;
+    padding: 15px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navigacija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+}
+
+.navigacija img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.navigacija ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+}
+
+.navigacija ul li a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.navigacija ul li a:hover {
+    color: #3C9DD0;
+}
+
+.navigacija ul li a.aktivno {
+    color: #3C9DD0;
+}
+
+/* --- HERO SEKCIJA --- */
+.onama-hero {
+    background-color: #092244;
+    padding: 160px 0 100px 0;
+    text-align: center;
+    width: 100%;
+    padding: 220px 0 140px 0;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.breadcrumbs span {
+    color: #3C9DD0;
+}
+
+.onama-hero h1 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+/* --- ZAJEDNIČKI STILOVI NASLOVA --- */
+.sekcija-nadnaslov {
+    text-align: center;
+    color: #3C9DD0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    
+}
+
+.sekcija-glavni-naslov {
+    text-align: center;
+    color: #072450;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* --- SEKCIJA 1: MISIJA, VIZIJA, VREDNOSTI --- */
+.ko-smo-mi-sekcija {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.mvv-kontejner {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.mvv-kartica {
+    flex: 1;
+    background: #ffffff;
+    border-top: 4px solid #3C9DD0;
+    padding: 30px 25px;
+    border-radius: 4px 4px 12px 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.mvv-kartica:hover {
+    transform: translateY(-5px);
+}
+
+.kartica-zaglavlje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.kartica-zaglavlje i {
+    font-size: 24px;
+}
+
+.ikona-misija { color: #e74c3c; }
+.ikona-vizija { color: #3498db; }
+.ikona-vrednosti { color: #f1c40f; }
+
+.kartica-zaglavlje h3 {
+    font-size: 22px;
+    color: #072450;
+    font-weight: 600;
+    text-align: center;
+}
+
+.mvv-kartica p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* --- SEKCIJA 2: ISTORIJAT --- */
+.istorijat-sekcija {
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.istorijat-kontejner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* 1. Okvir mora da ima position: relative da bi plavi sloj znao gde da se zalepi */
+.istorijat-kolona-slika {
+    flex: 0 0 45%;
+    position: relative; 
+}
+
+/* 2. Sama slika ostaje kakva jeste */
+.istorijat-kolona-slika img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* 3. Dodajemo prozirni plavi sloj TAČNO preko slike */
+.istorijat-kolona-slika::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 36, 80, 0.4); /* Plava boja sa 40% vidljivosti */
+    pointer-events: none; /* Omogućava da klikovi prolaze kroz sloj ako zatreba */
+}
+
+
+
+.istorijat-kolona-tekst {
+    flex: 0 0 50%;
+}
+
+.istorijat-kolona-tekst h2 {
+    color: #072450;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.istorijat-kolona-tekst p {
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+/* --- SEKCIJA 3: TESLA U BROJEVIMA --- */
+.brojevi-sekcija {
+    background-color: #113061;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.brojevi-nadnaslov {
+    color: #3C9DD0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.brojevi-naslov {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.brojevi-mreza {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.broj-kutija {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 220px;
+}
+
+.broj-kutija h3 {
+    color: #3C9DD0;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.broj-kutija p {
+    color: #b0c4de;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+/* --- SEKCIJA 4: UPRAVA / TIM --- */
+.tim-sekcija {
+    max-width: 1200px;
+    margin: 90px auto;
+    padding: 0 20px;
+}
+
+.tim-mreza {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.clan-kartica {
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+.avatar-krug {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #3C9DD0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.avatar-krug i {
+    font-size: 40px;
+    color: #072450;
+}
+
+/* Centriranje i sečenje slike da savršeno stane u krug */
+.avatar-krug img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ovo je magija koja seče sliku tako da ne bude spljoštena */
+    border-radius: 50%; /* Prati ivice okvira da ostane okrugla */
+}
+
+.clan-kartica h3 {
+    color: #222222;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.clan-kartica p {
+    color: #777777;
+    font-size: 14px;
+}
+
+/* --- FOOTER STILOVI --- */
+footer {
+    background-color: #072450;
+    color: #ffffff;
+    padding: 60px 0 20px 0;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.footer-kontejner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.footer-kolona {
+    flex: 1;
+}
+
+.footer-kolona h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-kolona h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #3C9DD0;
+}
+
+.footer-info-lista, 
+.footer-linkovi-lista {
+    list-style: none;
+}
+
+.footer-info-lista li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #b0c4de;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-info-lista li i {
+    color: #3C9DD0;
+    width: 15px;
+}
+
+.footer-info-lista li a {
+    color: #b0c4de;
+    text-decoration: none;
+}
+
+.footer-linkovi-lista li {
+    margin-bottom: 12px;
+}
+
+.footer-linkovi-lista li a {
+    color: #b0c4de;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-linkovi-lista li a:hover {
+    color: #3C9DD0;
+}
+
+.footer-drustvene-mreze {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-drustvene-mreze a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #072450;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.footer-drustvene-mreze a:hover {
+    background-color: #3C9DD0;
+    color: #ffffff;
+}
+
+.footer-dno {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.footer-dno p {
+    font-size: 13px;
+    color: #8fa4be;
+}
+
+
+/* --- MOBILNA RESPONSIVNOST --- */
+@media (max-width: 992px) {
+    .navigacija ul { display: none; }
+    .hamburger { display: block !important; cursor: pointer; }
+    .hamburger span { display: block; width: 25px; height: 3px; background: white; margin: 5px; }
+    
+    .mvv-kontejner, .tim-mreza { flex-direction: column; align-items: center; }
+    .istorijat-kontejner { flex-direction: column; text-align: center; }
+    .istorijat-kolona-slika { margin-bottom: 20px; }
+    .brojevi-mreza { flex-wrap: wrap; }
+    .broj-kutija { flex: 0 0 45%; }
+    .footer-kontejner { flex-direction: column; gap: 30px; }
+}
+
+/* --- STIL ZA HAMBURGER I OVERLAY --- */
+/*==========================================================================
+   DODATAK: RESPONSIVE DIZAJN I HAMBURGER MENI
+   ========================================================================== */
+
+/* Hamburger ikona po defaultu sakrivena na velikim ekranima */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+    color: #3C9DD0;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 24px; /* Povećano da bude uočljivije */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hamburger-btn:hover {
+    color: #3C9DD0; /* Plava boja pri hoveru */
+    transform: scale(1.05);
+}
+
+.hamburger-btn i {
+    font-size: 28px; /* Sama ikonica (bars) malo veća */
+    margin-left: 8px;
+}
+
+/* =========================================
+   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
+   ========================================= */
+.overlay-meni {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(7, 36, 80, 0.98);
+    z-index: 9999; 
+    display: flex;
+    flex-direction: column;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); 
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.overlay-meni.otvoren {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.overlay-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.overlay-top img {
+    height: 50px;
+}
+
+.zatvori-meni {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.zatvori-meni:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+.overlay-nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding-left: 10%; 
+}
+
+.overlay-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.overlay-nav ul li {
+    margin: 15px 0;
+}
+
+.overlay-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3.5rem; 
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.overlay-nav ul li a:hover,
+.overlay-nav ul li a.aktivno-overlay {
+    color: #4a90e2; 
+}
+
+@media (max-width: 768px) {
+    .overlay-nav ul li a {
+        font-size: 2.5rem; 
+    }
+}
+
+
+@media (max-width: 992px) {
+    /* Footer centriranje */
+    .footer-kontejner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    /* Centriranje ikonica u kontakt listi */
+    .footer-info-lista {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Centriranje linkova */
+    .footer-linkovi-lista {
+        padding: 0;
+    }
+
+    /* Centriranje ikonica za društvene mreže */
+    .footer-drustvene-mreze {
+        justify-content: center;
+    }
+    
+    /* Dodatni razmak za footer dno */
+    .footer-dno {
+        margin-top: 20px;
+    }
+}
+
+/* OVO DODAJ U SVE SVOJE CSS FAJLOVE */
+.overlay-content a.aktivno-overlay,
+.overlay-nav ul li a.aktivno-overlay {
+    color: #4a90e2 !important; /* Plava boja */
+    font-weight: 700;
+}
