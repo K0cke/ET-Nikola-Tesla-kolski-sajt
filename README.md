@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 🛠 Korišćene tehnologije
 
 HTML5 – Struktura stranica.
@@ -18,3 +19,7 @@ Optimizovan UI/UX: Korišćena moderna paleta boja i tipografija za bolje korisn
 💡 Motivacija
 Projekat je nastao sa idejom da se digitalizuje pristup informacijama o školovanju. Fokus je stavljen na čitljivost i brzinu učitavanja, kako bi posetioci što brže pronašli informacije koje ih zanimaju (npr. šifra profila ili broj potrebnih bodova).
 
+=======
+# ET-Nikola-Tesla-kolski-sajt
+Ovaj projekat predstavlja modernizovanu, responsivnu web prezentaciju za Elektrotehničku školu "Nikola Tesla" u Nišu. Cilj projekta je bio da se budućim učenicima i roditeljima pruži pregledan, moderan i lak pristup informacijama o obrazovnim profilima, bodovnim pragovima i procesu upisa.
+>>>>>>> ef884caa674af1243a2f503270d4d90aea3c6593
