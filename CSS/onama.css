@@ -338,120 +338,114 @@ header.skrolovan {
     font-size: 14px;
 }
 
-/* --- FOOTER STILOVI --- */
+/* --- FOOTER --- */
 footer {
-    background-color: #072450;
+    background-color: #061c30;
     color: #ffffff;
-    padding: 60px 0 20px 0;
-    margin-top: 100px;
-    width: 100%;
+    padding: 60px 10% 20px 10%;
 }
 
-.footer-kontejner {
+.footer {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
     gap: 40px;
+    margin-bottom: 40px;
 }
 
-.footer-kolona {
+.footer div {
     flex: 1;
 }
 
-.footer-kolona h4 {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 25px;
-    color: #ffffff;
-    position: relative;
-    padding-bottom: 8px;
+.footer h3 {
+    color: #3C9DD0;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #3C9DD0;
+    display: inline-block;
 }
 
-.footer-kolona h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background-color: #3C9DD0;
+.footer p, .footer ul li {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 10px;
 }
 
-.footer-info-lista, 
-.footer-linkovi-lista {
+.footer ul {
     list-style: none;
 }
 
-.footer-info-lista li {
-    margin-bottom: 15px;
-    font-size: 14px;
-    color: #b0c4de;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-info-lista li i {
-    color: #3C9DD0;
-    width: 15px;
-}
-
-.footer-info-lista li a {
-    color: #b0c4de;
+.footer ul li a {
     text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
 }
 
-.footer-linkovi-lista li {
-    margin-bottom: 12px;
-}
 
-.footer-linkovi-lista li a {
-    color: #b0c4de;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.2s;
-}
 
-.footer-linkovi-lista li a:hover {
+.footer ul li a:hover {
     color: #3C9DD0;
 }
 
-.footer-drustvene-mreze {
+/* --- IKONE SOCIJALNIH MREŽA --- */
+
+/* Poređaj krugove horizontalno sa razmakom */
+/* --- IKONE SOCIJALNIH MREŽA --- */
+.mreze-kontejner {
     display: flex;
     gap: 15px;
+    margin-top: 15px;
 }
 
-.footer-drustvene-mreze a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: #072450;
+/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
+.krug-mreza, .krug-mrezaig, .krug-mrezayt {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-decoration: none;
-    font-size: 16px;
-    transition: all 0.3s;
+    align-items: center;
+    
+    width: 45px;            
+    height: 45px;           
+    background-color: #ffffff; /* Bela pozadina kruga */
+    border-radius: 50%;     
+    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    
+    transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
-.footer-drustvene-mreze a:hover {
-    background-color: #3C9DD0;
+/* Podešavanje same IKONICE unutar kruga */
+.krug-mreza i, .krug-mrezaig, .krug-mrezayt {
+    font-size: 20px;          /* Veličina ikonice */
+    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    transition: color 0.3s ease;
+}
+
+/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
+.krug-mreza:hover {
+    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+.krug-mrezayt:hover {
+    background-color: #FF0000;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+.krug-mrezaig:hover {
+    background-color: #E1306C;   /* Krug postaje svetlo plav */
+    transform: translateY(-3px); /* Krug skoči malo nagore */
+}
+
+/* ...a ikonica unutar njega u isto vreme postane bela */
+.krug-mreza:hover i {
     color: #ffffff;
 }
 
-.footer-dno {
+.copyright {
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 50px;
     padding-top: 20px;
-}
-
-.footer-dno p {
-    font-size: 13px;
-    color: #8fa4be;
+    font-size: 0.85rem;
+    color: #888;
 }
 
 
@@ -609,34 +603,18 @@ footer {
 
 
 @media (max-width: 992px) {
-    /* Footer centriranje */
-    .footer-kontejner {
+    /* Footer organizacija */
+    .footer {
         flex-direction: column;
-        align-items: center;
         text-align: center;
         gap: 30px;
     }
-    
-    /* Centriranje ikonica u kontakt listi */
-    .footer-info-lista {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    /* Centriranje linkova */
-    .footer-linkovi-lista {
-        padding: 0;
-    }
-
-    /* Centriranje ikonica za društvene mreže */
-    .footer-drustvene-mreze {
+    .mreze-kontejner {
         justify-content: center;
     }
     
-    /* Dodatni razmak za footer dno */
-    .footer-dno {
-        margin-top: 20px;
+    .plavisloj h1 {
+        font-size: 38px;
     }
 }
 

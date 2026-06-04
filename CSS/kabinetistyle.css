@@ -71,6 +71,8 @@ header.skrolovan {
     font-size: 0.95rem;
     color: #ffffff;
     margin-bottom: 15px;
+    text-align: center; /* OVO JE NOVI RED KOJI TI FALI */
+    justify-content: center; /* OVO JE NOVI RED KOJI TI FALI */
 }
 
 .breadcrumb a {
