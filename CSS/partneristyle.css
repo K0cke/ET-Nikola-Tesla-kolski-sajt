@@ -580,18 +580,44 @@ footer {
         padding: 0 15px;
     }
 
-    /* Footer organizacija */
+    /* --- FOOTER MOBILNI PRIKAZ --- */
     .footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-    .mreze-kontejner {
-        justify-content: center;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 40px !important;
     }
     
-    .plavisloj h1 {
-        font-size: 38px;
+
+    #korisnilinkovi {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Savršeno centrirana lista korisnih linkova */
+    #korisnilinkovi ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        gap: 10px !important;
+    }
+
+    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
+    #socijalnemreze {
+        align-items: center !important; 
+        text-align: center !important;
+    }
+
+    /* Ikonice ponovo idu u red, jedna pored druge! */
+    .mreze-kontejner {
+        display: flex !important;
+        flex-direction: row !important; /* Stavlja ih u horizontalni red */
+        justify-content: flex-start !important; /* Gura ih ulevo */
+        gap: 15px !important;
+        margin-top: 15px !important;
     }
 }
 

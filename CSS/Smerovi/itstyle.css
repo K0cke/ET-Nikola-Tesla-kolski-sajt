@@ -753,10 +753,45 @@ h3.ZatvoriIks:hover {
     /* 6. Nakon završetka - iz 2 kolone u 1 */
     .nakon-grid { grid-template-columns: 1fr; }
 
-    /* 7. Footer */
-    .footer { flex-direction: column; text-align: center; gap: 30px; }
-    .footer h3 { margin-bottom: 10px; }
-    .mreze-kontejner { justify-content: center; }
+   /* --- FOOTER MOBILNI PRIKAZ --- */
+    .footer {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 40px !important;
+    }
+ 
+
+    #korisnilinkovi {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Savršeno centrirana lista korisnih linkova */
+    #korisnilinkovi ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        gap: 10px !important;
+    }
+
+    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
+    #socijalnemreze {
+        align-items: center !important; 
+        text-align: center !important;
+    }
+
+    /* Ikonice ponovo idu u red, jedna pored druge! */
+    .mreze-kontejner {
+        display: flex !important;
+        flex-direction: row !important; /* Stavlja ih u horizontalni red */
+        justify-content: flex-start !important; /* Gura ih ulevo */
+        gap: 15px !important;
+        margin-top: 15px !important;
+    }
 
     /* 8. Modal - da ne bude preširok */
     .ModalSadrzaj { margin: 20% auto; padding: 20px; }

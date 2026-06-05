@@ -359,19 +359,44 @@ footer {
         padding: 20px;
     }
 
-    /* Footer prilagođavanje */
+    /* --- FOOTER MOBILNI PRIKAZ --- */
     .footer {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 40px !important;
     }
     
-    .footer div {
-        align-items: center;
+
+    #korisnilinkovi {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
-    .smer-lista {
-        padding: 0 15px; /* Dodaje malu marginu sa strane da tekst ne ide do ivice ekrana */
+    /* Savršeno centrirana lista korisnih linkova */
+    #korisnilinkovi ul {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        gap: 10px !important;
+    }
+
+    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
+    #socijalnemreze {
+        align-items: center !important; 
+        text-align: center !important;
+    }
+
+    /* Ikonice ponovo idu u red, jedna pored druge! */
+    .mreze-kontejner {
+        display: flex !important;
+        flex-direction: row !important; /* Stavlja ih u horizontalni red */
+        justify-content: flex-start !important; /* Gura ih ulevo */
+        gap: 15px !important;
+        margin-top: 15px !important;
     }
 }
 
