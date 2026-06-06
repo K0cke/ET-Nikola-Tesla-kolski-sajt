@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETŠ Nikola Tesla - Početna | Oficijalni sajt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Slike/Logo/images-removebg-preview (2) (1).png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="navigacija">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            
+            <ul class="d-none d-lg-flex">
+                <li><a href="./index.html" class="aktivno">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html">Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" >Kontakt</a></li>
+            </ul>
+
+            <button class="hamburger-btn d-lg-none" id="otvori-meni">
+                 <i class="fas fa-bars ms-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="fullscreen-meni" class="overlay-meni">
+        <div class="overlay-top">
+            <a href="../HTML/index.html"><img src="../Slike/Logo/images-removebg-preview (2) (1).png" alt="Logo Skole"></a>
+            <div class="zatvori-meni" id="zatvori-meni">
+                <span>Close</span> <i class="fas fa-times"></i>
+            </div>
+        </div>
+        
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="./index.html" class="aktivno-overlay">Početna</a></li>
+                <li><a href="./onama.html">O školi</a></li>
+                <li><a href="./smerovi.html" class=>Smerovi</a></li>
+                <li><a href="./vesti.html">Vesti</a></li>
+                <li><a href="./kontakt.html" >Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+        
+
+    <div id="heropocetna">
+        <div class="plavisloj">
+            <h1>
+                <span class="hero-regular">Znanje za budućnost –</span> 
+                <span class="hero-bold">ETŠ Nikola Tesla Niš</span>
+            </h1>
+            <button id="UpisiMe">UPIŠI ME</button>
+        </div>
+    </div>
+
+    <section id="brojevi-sekcija">
+        <h2 class="brojevi-glavni-naslov">TESLA U BROJEVIMA</h2>
+        <h3 class="brojevi-podnaslov">Škola sa tradicijom i rezultatima</h3>
+        
+        <div id="brojevi">
+            <div class="kartica">
+                <h2 id="brucenika">0</h2> <p>učenika</p>
+            </div>
+            <div class="kartica">
+                <h2 id="brsmerova">0</h2> <p>smerova</p>
+            </div>
+            <div class="kartica">
+                <h2 id="brgodina">0</h2> <p>godina tradicije</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vesti">
+        <h2 class="vesti-glavni-naslov">AKTUELNO</h2> 
+        <h3 class="vesti-podnaslov">Novosti i događaji</h3> 
+        
+        <div class="slajder-okvir">
+            <button class="strelica-btn levo" id="prethodna-vest">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="vesticontainer"> 
+                <div class="vestikartica"> 
+                    <img src="../Slike/Pocetna/skolskeklupe.jpg" alt="Skolske Klupe"> 
+                    <p class="vest-datum">03. MAJ 2026</p> 
+                    <h3>Dan otvorenih vrata - upis u školsku 2026/2027 godinu</h3>
+                    <p class="vest-opis">Pozivamo buduće učenike i roditelje da nas posete</p> 
+                </div>
+
+                <div class="vestikartica"> 
+                    <img src="../Slike/Pocetna/ucionicainformatike.jpg" alt="Ucionica Informatics"> 
+                    <p class="vest-datum">26. APRIL 2026</p> 
+                    <h3>Nova učionica informatike</h3> 
+                    <p class="vest-opis">Škola je otvorila novu učionica sa modernim računarima</p> 
+                </div>
+
+                <div class="vestikartica">
+                    <img src="../Slike/Vesti/Pocetna/IMG-201165f4d7abcb766be86a3e603582b0-V.jpg" alt="Uspeh na republickom takmicenju">
+                    <p class="vest-datum">15. APRIL 2026</p>
+                    <h3>Uspeh na republičkom takmičenju</h3>
+                    <p class="vest-opis">Naši programeri su osvojili prvo mesto iz kodiranja</p>
+                </div>
+
+                <div class="vestikartica">
+                    <img src="../Slike/Vesti/Pocetna/649215350_18083236289590489_2887284250395892476_n-700x450.jpg" alt="Projekat razmene">
+                    <p class="vest-datum">02. APRIL 2026</p>
+                    <h3>Međunarodni projekat razmene</h3>
+                    <p class="vest-opis">Ugošćujemo profesore i učenike iz partnerskih škola Evrope</p>
+                </div>
+            </div>
+
+            <button class="strelica-btn desno" id="sledeca-vest">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <section id="prednosti">
+        <div class="sekcija-naslov">
+            <p class="nadnaslov">NAŠE PREDNOSTI</p>
+            <h2>Zašto izabrati Teslu?</h2>
+        </div>
+
+        <div class="prednosti-kontejner">
+            <div class="prednost-kartica">
+                <div class="kartica-ikona">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Moderna oprema</h3>
+                <p>Savremeni kabineti opremljeni najnovijom tehnologijom omogućavaju učenje kroz praksu.</p>
+                <a href="/HTML/kabineti.html" class="kartica-link">Pogledaj kabinete <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="prednost-kartica">
+                <div class="kartica-ikona">
+                    <i class="fas fa-hammer"></i>
+                </div>
+                <h3>Stručna praksa</h3>
+                <p>Učenje kroz rad u partnerskim kompanijama. Stičeš pravo radno iskustvo pre mature.</p>
+                <a href="../HTML/partneri.html" class="kartica-link">Naši partneri <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="prednost-kartica">
+                <div class="kartica-ikona">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <h3>Bogata tradicija</h3>
+                <p>87 godina obrazovanja uspešnih generacija. Škola sa dokazanim rezultatima i ugledom.</p>
+                <a href="../HTML/onama.html" class="kartica-link">Naš istorijat <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="smerovi">
+        <div class="sekcija-naslov">
+            <p class="nadnaslov">OBRAZOVNI PROFILI</p>
+            <h2>Naši smerovi</h2>
+        </div>
+
+        <div class="smerovi-grid">
+            <div class="smer-kartica">
+                <div class="smer-vrh">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="smer-telo">
+                    <h4>Tehničar informacionih tehnologija</h4>
+                    <p class="trajanje">4 godine</p>
+                    <a href="./Smerovi/it.html" class="smer-link">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="smer-kartica">
+                <div class="smer-vrh">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <div class="smer-telo">
+                    <h4>Elektrotehničar računara</h4>
+                    <p class="trajanje">4 godine</p>
+                    <a href="./Smerovi/etr.html" class="smer-link">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="smer-kartica">
+                <div class="smer-vrh">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="smer-telo">
+                    <h4>Tehničar mehatronike</h4>
+                    <p class="trajanje">4 godine</p>
+                    <a href="./Smerovi/tm.html" class="smer-link">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="smer-kartica">
+                <div class="smer-vrh">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="smer-telo">
+                    <h4>Elektrotehničar energetike</h4>
+                    <p class="trajanje">4 godine</p>
+                    <a href="./Smerovi/ee.html" class="smer-link">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="smer-kartica">
+                <div class="smer-vrh">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <div class="smer-telo">
+                    <h4>Tehničar obnovljivih izvora energije</h4>
+                    <p class="trajanje">4 godine</p>
+                    <a href="./Smerovi/toie.html" class="smer-link">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="smer-kartica">
+                <div class="smer-vrh">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="smer-telo">
+                    <h4>Električar</h4>
+                    <p class="trajanje">3 godine</p>
+                    <a href="./Smerovi/e.html" class="smer-link">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="smer-kartica">
+                <div class="smer-vrh">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <div class="smer-telo">
+                    <h4>Elektromonter mreža i postrojenja</h4>
+                    <p class="trajanje">3 godine</p>
+                    <a href="./Smerovi/emip.html" class="smer-link">Saznaj više <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="poziv-upis">
+        <p class="cta-nadnaslov">PRIDRUŽI SE NAMA</p>
+        <h2>Zainteresovan/a za upis?</h2>
+        <p class="cta-tekst">Pronađi smer koji odgovara tvojim interesovanjima i kreni ka uspešnoj karijeri.</p>
+        <div class="cta-dugmad">
+            <a href="./smerovi.html" class="cta-btn">Pogledaj smerove</a>
+            <a href="/HTML/kontakt.html" class="cta-btn prozirno">Kontaktiraj nas</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div>
+                <h3>Kontakt</h3>
+                <p>Adresa: Aleksandra Medvedeva 18, Niš</p>
+                <p>Telefon: 018/588-583</p>
+                <p>Email: <a href="mailto:etstesla@etstesla.ni.ac.rs" target="_blank">etstesla@etstesla.ni.ac.rs</a></p>
+            </div>
+            <div id="korisnilinkovi">
+                <h3>Korisni linkovi</h3>
+                <ul>
+                    <li><a href="onama.html">O školi</a></li>
+                    <li><a href="smerovi.html">Smerovi</a></li>
+                    <li><a href="vesti.html">Vesti</a></li>
+                    <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div id="socijalnemreze">
+                <h3>Pratite nas</h3>
+                <div class="mreze-kontejner">
+                    <a class="krug-mreza" href="https://www.facebook.com/teslaets" target="_blank" >
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="krug-mrezaig" href="https://www.instagram.com/etstesla/" target="_blank" >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="krug-mrezayt" href="https://www.youtube.com/@mediaetsnikolatesla492" target="_blank" >
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">© 2026 ETS Nikola Tesla Niš. Sva prava zadržana.</p>
+    </footer>
+
+    <div id="Modal" class="ModalPozadina">
+        <div class="ModalSadrzaj">
+            <h3 id="ZatvoriModal" class="ZatvoriIks">&times;</h3>
+            <h2>Kako se upisati?</h2>
+            <ul>
+                <li>Položi završni ispit</li>
+                <li>Prijavi se na <a href="https://mojasrednjaskola.gov.rs" target="_blank">mojasrednjaskola.gov.rs</a></li>
+                <li>Unesi šifru smera kojeg želiš da upišeš</li>
+                <li>Čekaj rezultate</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/index.js"></script>
+</body>
+</html>
