@@ -12,11 +12,11 @@ html, body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGACIJA (HEADER) --- */
+/* --- NAVIGACIJA--- */
 header {
     background-color: #072450;
-    padding: 20px 0; /* Malo sam smanjio padding da header bude elegantniji pri skrolu */
-    position: fixed; /* OVO je ključno - drži ga uvek na vrhu */
+    padding: 20px 0; 
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -68,13 +68,9 @@ header.skrolovan {
 }
 
 
-/* ==========================================================================
-   HERO SEKCIJA (Centrirano sve)
-   ========================================================================== */
+/* HERO SEKCIJA (Centrirano sve) */
 .praksa-hero {
     background: linear-gradient(135deg, #0d2d5e 0%, #1a3a6b 100%);
-    /* OVO REŠAVA PROBLEM: Povećavamo padding-top (sa 120px na 160px ili 180px) 
-       kako bismo tekst gurnuli ispod visine fiksiranog headera */
     padding: 180px 0 80px 0; 
     display: flex;
     align-items: center;
@@ -92,8 +88,8 @@ header.skrolovan {
     font-size: 0.95rem;
     color: #ffffff;
     margin-bottom: 15px;
-    text-align: center; /* OVO JE NOVI RED KOJI TI FALI */
-    justify-content: center; /* OVO JE NOVI RED KOJI TI FALI */
+    text-align: center; 
+    justify-content: center; 
 }
 
 .breadcrumb span {
@@ -111,20 +107,16 @@ header.skrolovan {
     color: #a0badd;
 }
 
-/* ==========================================================================
-   GLAVNI KONTEJNER
-   ========================================================================== */
 .praksa-glavna-sekcija {
     padding: 60px 0 100px 0;
 }
 
 .praksa-kontejner {
-    max-width: 1200px; /* Prošireno na 1200px da grid sa 3 kartice stoji savršeno */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* UVODNI DEO (Centrirano) */
 .praksa-uvod {
     text-align: center;
     margin-bottom: 40px;
@@ -150,10 +142,10 @@ header.skrolovan {
     color: #555555;
     line-height: 1.7;
     max-width: 850px;
-    margin: 0 auto; /* Centriranje paragrafa unutar diva */
+    margin: 0 auto; 
 }
 
-/* INFO BOX */
+
 .praksa-info-box {
     background-color: #ffffff;
     border-left: 5px solid #3C9DD0;
@@ -182,13 +174,11 @@ header.skrolovan {
     font-weight: 600;
 }
 
-/* ==========================================================================
-   GRID SA KOMPANIJAMA (3 u redu, ukupno 2 reda)
-   ========================================================================== */
+/* GRID SA KOMPANIJAMA */
 .kompanije-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tačno 3 kolone */
-    gap: 25px; /* Razmak između kartica */
+    gap: 25px; 
     margin-bottom: 60px;
 }
 
@@ -202,7 +192,7 @@ header.skrolovan {
 }
 
 .kompanija-kartica:hover {
-    transform: translateY(-5px); /* Sada ide blago nagore jer su u gridu */
+    transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(60, 157, 208, 0.12);
     border-color: #3C9DD0;
 }
@@ -219,9 +209,7 @@ header.skrolovan {
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   TEGET BOARD SA IKONICAMA
-   ========================================================================== */
+/*TEGET BOARD SA IKONICAMA */
 .praksa-tamni-board {
     background-color: #072450;
     border-radius: 16px;
@@ -241,11 +229,11 @@ header.skrolovan {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     align-items: center;
-    gap: 12px; /* Razmak između ikonice i teksta */
+    gap: 12px;
 }
 
 .board-naslov i {
-    color: #3C9DD0; /* Naša svetlo plava boja za ikonicu */
+    color: #3C9DD0; 
     font-size: 1.1em;
 }
 
@@ -274,9 +262,7 @@ header.skrolovan {
     top: -5px;
 }
 
-/* ==========================================================================
-   CTA SEKCIJA
-   ========================================================================== */
+/*CTA SEKCIJA */
 .praksa-cta {
     text-align: center;
     background-color: #ffffff;
@@ -363,16 +349,12 @@ footer {
 }
 
 /* --- IKONE SOCIJALNIH MREŽA --- */
-
-/* Poređaj krugove horizontalno sa razmakom */
-/* --- IKONE SOCIJALNIH MREŽA --- */
 .mreze-kontejner {
     display: flex;
     gap: 15px;
     margin-top: 15px;
 }
 
-/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
 .krug-mreza, .krug-mrezaig, .krug-mrezayt {
     display: flex;
     justify-content: center;
@@ -380,37 +362,36 @@ footer {
     
     width: 45px;            
     height: 45px;           
-    background-color: #ffffff; /* Bela pozadina kruga */
+    background-color: #ffffff; 
     border-radius: 50%;     
-    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    text-decoration: none;     
     
     transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
-/* Podešavanje same IKONICE unutar kruga */
+
 .krug-mreza i, .krug-mrezaig, .krug-mrezayt {
-    font-size: 20px;          /* Veličina ikonice */
-    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    font-size: 20px;        
+    color: #061c30;           
     transition: color 0.3s ease;
 }
 
-/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
+
 .krug-mreza:hover {
-    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #3C9DD0;   
+    transform: translateY(-3px); 
 }
 
 .krug-mrezayt:hover {
-    background-color: #FF0000;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #FF0000;   
+    transform: translateY(-3px); 
 }
 
 .krug-mrezaig:hover {
-    background-color: #E1306C;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #E1306C;   
+    transform: translateY(-3px); 
 }
 
-/* ...a ikonica unutar njega u isto vreme postane bela */
 .krug-mreza:hover i {
     color: #ffffff;
 }
@@ -423,7 +404,6 @@ footer {
     color: #888;
 }
 
-/* Hamburger ikona po defaultu sakrivena na velikim ekranima */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -439,7 +419,7 @@ footer {
 }
 
 .hamburger-btn {
-    display: none; /* OVO JE KLJUČNO - sakriva ga na velikim ekranima */
+    display: none; 
     background: none;
     border: none;
     color: white;
@@ -451,7 +431,6 @@ footer {
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-/* 2. Ovo su tvoji hover efekti */
 .hamburger-btn:hover {
     color: #3C9DD0;
     transform: scale(1.05);
@@ -462,9 +441,7 @@ footer {
     margin-left: 8px;
 }
 
-/* =========================================
-   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
-   ========================================= */
+/* FULLSCREEN OVERLAY MENI */
 .overlay-meni {
     position: fixed;
     top: 0;
@@ -550,32 +527,28 @@ footer {
     color: #4a90e2; 
 }
 
-/* --- MOBILNI PRIKAZ (PRILAGOĐAVANJE) --- */
+/* --- MOBILNI PRIKAZ --- */
 @media (max-width: 768px) {
     
-    /* 1. Sređivanje plavog borda */
     .praksa-tamni-board {
-        grid-template-columns: 1fr; /* Sve ide jedna ispod druge */
-        text-align: center;         /* Centriramo sav tekst */
-        padding: 30px 20px;         /* Smanjujemo padding da ne bi bilo preširoko */
+        grid-template-columns: 1fr; 
+        text-align: center;         
+        padding: 30px 20px;         
         gap: 30px;
     }
     
-    /* Centriranje ikonica u plavom bordu */
     .board-naslov {
         justify-content: center;
-        border-bottom: none; /* Možda lepše izgleda bez crte na mobilnom */
+        border-bottom: none; 
         padding-bottom: 0;
     }
 
-    /* 2. Sređivanje grid-a kompanija */
     .kompanije-grid {
-        grid-template-columns: 1fr; /* Sve firme jedna ispod druge */
-        gap: 15px;                  /* Manji razmak */
-        padding: 0 10px;            /* Dodatni prostor da se ne lepi za ivice */
+        grid-template-columns: 1fr; 
+        gap: 15px;                  
+        padding: 0 10px;            
     }
 
-    /* Osiguravamo da se kontejner ne širi van ekrana */
     .praksa-kontejner {
         padding: 0 15px;
     }
@@ -596,7 +569,6 @@ footer {
         align-items: center !important;
     }
 
-    /* Savršeno centrirana lista korisnih linkova */
     #korisnilinkovi ul {
         display: flex !important;
         flex-direction: column !important;
@@ -605,17 +577,15 @@ footer {
         gap: 10px !important;
     }
 
-    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
     #socijalnemreze {
         align-items: center !important; 
         text-align: center !important;
     }
 
-    /* Ikonice ponovo idu u red, jedna pored druge! */
     .mreze-kontejner {
         display: flex !important;
-        flex-direction: row !important; /* Stavlja ih u horizontalni red */
-        justify-content: flex-start !important; /* Gura ih ulevo */
+        flex-direction: row !important; 
+        justify-content: flex-start !important; 
         gap: 15px !important;
         margin-top: 15px !important;
     }
@@ -623,7 +593,7 @@ footer {
 
 @media (max-width: 991px) {
     .hamburger-btn {
-        display: flex; /* Ovo vraća dugme u život samo na mobilnom */
+        display: flex;
         align-items: center;
     }
 }

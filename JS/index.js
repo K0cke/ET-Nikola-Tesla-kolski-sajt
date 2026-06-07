@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // 1. SLAJDER ZA VESTI
+    // SLAJDER ZA VESTI
     let kontejner = document.querySelector(".vesticontainer");
     let dugmeLevo = document.getElementById("prethodna-vest");
     let dugmeDesno = document.getElementById("sledeca-vest");
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 2. ANIMACIJA BROJEVA
+    //ANIMACIJA BROJEVA
     function animirajBroj(id, cilj, korak, brzina) {
         let element = document.getElementById(id);
         if (!element) return;

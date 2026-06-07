@@ -43,9 +43,7 @@ const brojac = document.getElementById("brojac");
 const prethodni = document.getElementById("prethodni");
 const sledeci = document.getElementById("sledeci");
 
-/* =========================================
-   PRIKAZ KABINETA
-========================================= */
+/* PRIKAZ KABINET */
 
 function prikaziKabinet(index){
 
@@ -86,9 +84,7 @@ function prikaziKabinet(index){
     }, 300);
 }
 
-/* =========================================
-   AUTO SLIDER
-========================================= */
+/* AUTO SLIDED */
 
 function pokreniAutoSlider() {
 
@@ -107,9 +103,7 @@ function pokreniAutoSlider() {
     }, 6000);
 }
 
-/* =========================================
-   STRELICE
-========================================= */
+/* STRELICE */
 
 sledeci.addEventListener("click", () => {
 
@@ -136,10 +130,6 @@ prethodni.addEventListener("click", () => {
 
     pokreniAutoSlider();
 });
-
-/* =========================================
-   MINI KARTICE
-========================================= */
 
 document
 .querySelectorAll(".mini-kartica")
@@ -171,9 +161,7 @@ document
 
 });
 
-/* =========================================
-   FILTERI
-========================================= */
+/* FILTERI */
 
 const filteri =
 document.querySelectorAll(".filter");
@@ -214,9 +202,6 @@ filteri.forEach(filter => {
 
 });
 
-/* =========================================
-   START
-========================================= */
 
 prikaziKabinet(0);
 pokreniAutoSlider();

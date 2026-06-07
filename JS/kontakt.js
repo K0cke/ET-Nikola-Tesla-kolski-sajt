@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ==========================================
-    // 1. LOGIKA ZA TOAST PORUKU I FORMU
-    // ==========================================
+
+     //TOAST PORUKA NA KONTAKT STRANICI
+
     const kontaktForma = document.getElementById('kontaktForma');
     const toastElement = document.getElementById('uspehToast');
 
@@ -25,9 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error("Nisam našao 'kontaktForma' ID u HTML-u!");
     }
 
-    // ==========================================
-    // 2. LOGIKA ZA HARVARD FULLSCREEN MENI
-    // ==========================================
+//HAMBURGER MENI
     const otvoriMeniBtn = document.getElementById('otvori-meni');
     const zatvoriMeniBtn = document.getElementById('zatvori-meni');
     const fullscreenMeni = document.getElementById('fullscreen-meni');
@@ -40,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Kada se klikne na 'Close' dugme zatvaramo meni
+    // Kada se klikne na Close dugme zatvaramo meni
     if (zatvoriMeniBtn && fullscreenMeni) {
         zatvoriMeniBtn.addEventListener('click', function() {
             fullscreenMeni.classList.remove('otvoren');

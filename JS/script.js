@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // 1. NAVIGACIJA - BOJENJE NA SKROL
+// NAVIGACIJA - BOJENJE NA SKROL
     const header = document.querySelector('header');
     if (header) {
         window.addEventListener('scroll', function() {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 2. MOBILNI MENI (Radi na obe varijante - klase i ID-jevi)
+    // MOBILNI MENI 
     const hamburger = document.getElementById('otvori-meni');
     const closeBtn = document.getElementById('zatvori-meni');
     const menu = document.querySelector('.overlay-meni');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 3. MODAL "UPIŠI ME"
+    // MODAL "UPIŠI ME"
     const otvoriModal = document.getElementById('UpisiMe') || document.getElementById('OtvoriModal');
     const zatvoriModal = document.getElementById('ZatvoriModal');
     const modal = document.getElementById('Modal');

@@ -12,7 +12,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGACIJA (HEADER) --- */
+/* --- NAVIGACIJA --- */
 header {
     background-color: #072450; 
     padding: 30px;
@@ -70,14 +70,12 @@ header.skrolovan {
 
 
 
-/* ================================================
-   HERO SEKCIJA
-   ================================================ */
+/* HERO SEKCIJA */
 .smer-hero {
     background: linear-gradient(135deg, #0d2d5e 0%, #1a3a6b 100%);
     padding: 60px 60px;
     padding-top: 140px;
-    min-height: 280px; /* da hero bude viši */
+    min-height: 280px;
     display: flex;
     align-items: center;
 }
@@ -87,7 +85,7 @@ header.skrolovan {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* vertikalno centriranje */
+    align-items: center; 
     gap: 40px;
     width: 100%;
 }
@@ -96,7 +94,7 @@ header.skrolovan {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertikalno */
+    justify-content: center; 
 }
 
 .breadcrumb {
@@ -178,9 +176,7 @@ header.skrolovan {
     color: #3C9DD0;
 }
 
-/* ================================================
-   OPŠTI STILOVI SEKCIJA
-   ================================================ */
+
 .smer-sekcija {
     max-width: 1200px;
     margin: 0 auto;
@@ -213,9 +209,6 @@ header.skrolovan {
     margin-right: auto;
 }
 
-/* ================================================
-   BODOVI
-   ================================================ */
 .bodovi-grid {
     display: flex;
     gap: 24px;
@@ -259,9 +252,6 @@ header.skrolovan {
     color: #aaa;
 }
 
-/* ================================================
-   PREDMETI
-   ================================================ */
 .predmeti-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -301,9 +291,6 @@ header.skrolovan {
     border-bottom: none;
 }
 
-/* ================================================
-   VEŠTINE
-   ================================================ */
 .vestine-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -340,9 +327,7 @@ header.skrolovan {
     font-size: 16px;
 }
 
-/* ================================================
-   NAKON ZAVRŠETKA
-   ================================================ */
+/* NAKON ZAVRŠETKA */
 .nakon-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -383,9 +368,7 @@ header.skrolovan {
     margin-bottom: 8px;
 }
 
-/* ================================================
-   UPIŠI ME DUGME
-   ================================================ */
+/* UPIŠI ME DUGME */
 .upis-sekcija {
     text-align: center;
     border-bottom: none;
@@ -454,15 +437,10 @@ footer {
     transition: color 0.3s;
 }
 
-
-
 .footer ul li a:hover {
     color: #3C9DD0;
 }
 
-/* --- IKONE SOCIJALNIH MREŽA --- */
-
-/* Poređaj krugove horizontalno sa razmakom */
 /* --- IKONE SOCIJALNIH MREŽA --- */
 .mreze-kontejner {
     display: flex;
@@ -470,7 +448,6 @@ footer {
     margin-top: 15px;
 }
 
-/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
 .krug-mreza, .krug-mrezaig, .krug-mrezayt {
     display: flex;
     justify-content: center;
@@ -478,37 +455,35 @@ footer {
     
     width: 45px;            
     height: 45px;           
-    background-color: #ffffff; /* Bela pozadina kruga */
+    background-color: #ffffff; 
     border-radius: 50%;     
-    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    text-decoration: none; 
     
     transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
-/* Podešavanje same IKONICE unutar kruga */
 .krug-mreza i, .krug-mrezaig, .krug-mrezayt {
-    font-size: 20px;          /* Veličina ikonice */
-    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    font-size: 20px; 
+    color: #061c30;
     transition: color 0.3s ease;
 }
 
-/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
+
 .krug-mreza:hover {
-    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #3C9DD0; 
+    transform: translateY(-3px); 
 }
 
 .krug-mrezayt:hover {
-    background-color: #FF0000;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #FF0000; 
+    transform: translateY(-3px); 
 }
 
 .krug-mrezaig:hover {
-    background-color: #E1306C;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #E1306C; 
+    transform: translateY(-3px); 
 }
 
-/* ...a ikonica unutar njega u isto vreme postane bela */
 .krug-mreza:hover i {
     color: #ffffff;
 }
@@ -523,17 +498,15 @@ footer {
 
 
 /* --- STIL ZA ISKAČUĆI MODAL --- */
-
-/* 1. Crna prozirna pozadina koja prekriva ceo ekran (Mora veliko M i P kao u HTML-u) */
 .ModalPozadina {
-    display: none;             /* KLJUČNO: Sakriva prozor čim se stranica učita! */
-    position: fixed;           /* Zaključano preko celog ekrana */
+    display: none;            
+    position: fixed;  
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Tamni prozirni sloj */
-    z-index: 2000;             /* Ide ispred svega */
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 2000; 
 }
 
 
@@ -548,7 +521,7 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Naslov unutar bele kutije */
+
 .ModalSadrzaj h2 {
     color: #0d385c;
     font-size: 28px;
@@ -557,7 +530,7 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Lista i stavke */
+
 .ModalSadrzaj ul {
     list-style-type: disc;
     margin-left: 30px;
@@ -575,7 +548,7 @@ footer {
     text-decoration: underline;
 }
 
-/* 3. Dugme X za zatvaranje (Obrati pažnju na veliko Z i I) */
+/* 3. Dugme X */
 h3.ZatvoriIks {
     position: absolute;
     top: 20px;
@@ -584,14 +557,13 @@ h3.ZatvoriIks {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    margin: 0;       /* Resetuje fabričku marginu naslova */
+    margin: 0; 
 }
 
 h3.ZatvoriIks:hover {
-    color: #3C9DD0;  /* Svetlo plava na hover */
+    color: #3C9DD0;
 }
 
-/* Hamburger ikona po defaultu sakrivena na velikim ekranima */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -612,7 +584,7 @@ h3.ZatvoriIks:hover {
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 24px; /* Povećano da bude uočljivije */
+    font-size: 24px; 
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -621,18 +593,16 @@ h3.ZatvoriIks:hover {
 }
 
 .hamburger-btn:hover {
-    color: #3C9DD0; /* Plava boja pri hoveru */
+    color: #3C9DD0; 
     transform: scale(1.05);
 }
 
 .hamburger-btn i {
-    font-size: 28px; /* Sama ikonica (bars) malo veća */
+    font-size: 28px; 
     margin-left: 8px;
 }
 
-/* =========================================
-   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
-   ========================================= */
+/* FULLSCREEN OVERLAY MENI */
 .overlay-meni {
     position: fixed;
     top: 0;
@@ -723,12 +693,10 @@ h3.ZatvoriIks:hover {
 /* --- MOBILNI PRIKAZ (RESPONSIVE) --- */
 @media (max-width: 768px) {
     
-    /* 1. Smanjivanje paddinga za bolji pregled na telefonu */
     header { padding: 15px 20px; }
     .navigacija { padding: 0 5%; }
     .smer-sekcija { padding: 30px 20px; }
 
-    /* 2. Hero sekcija - tekst i info kartica idu jedan ispod drugog */
     .smer-hero { padding: 100px 20px 40px 20px; }
     .smer-hero-sadrzaj { 
         flex-direction: column; 
@@ -740,17 +708,13 @@ h3.ZatvoriIks:hover {
     .smer-hero-tagovi { justify-content: center; }
     .smer-info-kartica { width: 100%; min-width: auto; }
 
-    /* 3. Bodovi - vertikalno ređanje */
     .bodovi-grid { flex-direction: column; gap: 15px; }
     .bod-kartica { width: 100%; padding: 20px; }
 
-    /* 4. Predmeti - iz 4 kolone u 1 */
     .predmeti-grid { grid-template-columns: 1fr; gap: 30px; }
     
-    /* 5. Veštine - iz 2 kolone u 1 */
     .vestine-grid { grid-template-columns: 1fr; }
     
-    /* 6. Nakon završetka - iz 2 kolone u 1 */
     .nakon-grid { grid-template-columns: 1fr; }
 
    /* --- FOOTER MOBILNI PRIKAZ --- */
@@ -769,7 +733,6 @@ h3.ZatvoriIks:hover {
         align-items: center !important;
     }
 
-    /* Savršeno centrirana lista korisnih linkova */
     #korisnilinkovi ul {
         display: flex !important;
         flex-direction: column !important;
@@ -778,25 +741,30 @@ h3.ZatvoriIks:hover {
         gap: 10px !important;
     }
 
-    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
     #socijalnemreze {
         align-items: center !important; 
         text-align: center !important;
     }
 
-    /* Ikonice ponovo idu u red, jedna pored druge! */
+
     .mreze-kontejner {
         display: flex !important;
-        flex-direction: row !important; /* Stavlja ih u horizontalni red */
-        justify-content: flex-start !important; /* Gura ih ulevo */
+        flex-direction: row !important; 
+        justify-content: flex-start !important; 
         gap: 15px !important;
         margin-top: 15px !important;
     }
 
-    /* 8. Modal - da ne bude preširok */
-    .ModalSadrzaj { margin: 20% auto; padding: 20px; }
-    .ModalSadrzaj h2 { font-size: 22px; }
-    .ModalSadrzaj ul li { font-size: 16px; }
+    .ModalSadrzaj { 
+        margin: 20% auto; 
+        padding: 20px; 
+    }
+    .ModalSadrzaj h2 { 
+        font-size: 22px;
+     }
+    .ModalSadrzaj ul li { 
+        font-size: 16px; 
+    }
 }
 
 

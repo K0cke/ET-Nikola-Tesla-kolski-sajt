@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Filtriranje vesti (OVO OSTAJE ISTO KAO ŠTO JE BILO)
+    //  Filtriranje vesti
     const dugmici = document.querySelectorAll('.kat-btn');
     const sveVesti = document.querySelectorAll('article');
     const glavniKontejner = document.querySelector('.vesti-kontejner');
@@ -29,9 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ==========================================
-    // 2. LOGIKA ZA NOVI HARVARD FULLSCREEN MENI
-    // ==========================================
+
+    // LOGIKA ZA NOVI HARVARD FULLSCREEN MENI
     const otvoriMeniBtn = document.getElementById('otvori-meni');
     const zatvoriMeniBtn = document.getElementById('zatvori-meni');
     const fullscreenMeni = document.getElementById('fullscreen-meni');

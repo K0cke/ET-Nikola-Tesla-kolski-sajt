@@ -1,4 +1,3 @@
-/* --- GLOBALNI RESET ZA SVE ELEMENTE --- */
 * {
     margin: 0;
     padding: 0;
@@ -13,12 +12,12 @@ html, body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGACIJA (HEADER) --- */
+/* --- NAVIGACIJA --- */
 header {
     background-color: transparent; 
-    padding: 30px; /* Malo veći vertikalni razmak da prodiše */
+    padding: 30px; 
     
-    /* Ključni deo: postavljamo je preko slike */
+    /* --- Da bude fiksirana navigacija i da bude vidljiva preko slike --- */
     position: fixed;
     top: 0;
     left: 0;
@@ -26,19 +25,18 @@ header {
     z-index: 1000;
 }
 
-/* Ova klasa će se automatski dodati na header preko JavaScripta čim se skroluje na dole */
 header.skrolovan {
-    background-color: #0d385c; /* Plava pozadina koju si tražio */
-    padding: 15px 30px;        /* Trik: Smanjujemo padding na pola da navigacija postane tanja i elegantnija dok skroluješ */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Dodajemo blagu senku da se meni lepo odvoji od sadržaja iza */
+    background-color: #0d385c; 
+    padding: 15px 30px;       
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
 }
 
 .navigacija {
     display: flex;
-    justify-content: space-between; /* Ključno: gura logo skroz levo, a listu (ul) skroz desno */
-    align-items: center;            /* Centrira logo i linkove vertikalno, da budu u istoj ravni */
+    justify-content: space-between; 
+    align-items: center;            
     width: 100%;
-    padding: 0 10%;                 /* Daje leve i desne ivice (granice) navigaciji, npr. 10% kao i ostatak sajta */
+    padding: 0 10%;                
 }
 
 .navigacija img {
@@ -48,13 +46,12 @@ header.skrolovan {
 
 .navigacija ul {
     display: flex;
-    gap: 40px; /* Malo veći razmak između linkova na sredini */
+    gap: 40px; 
     list-style: none;
-    justify-content: center; /* Centriranje samih linkova unutar liste */
+    justify-content: center; 
     width: 100%;
 }
 
-/* Figma: Poppins Regular, 20px, #FFFFFF */
 .navigacija ul li a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
@@ -68,15 +65,15 @@ header.skrolovan {
     color: #3C9DD0; 
 }
 
-/* --- HERO SEKCIJA --- */
+/* --- HERO --- */
 #heropocetna {
     background: url('../Slike/Baner/skolaspreda.jpg') no-repeat center center/cover;
-    height: 85vh; /* Povećao sam na 85vh jer sad i navigacija troši prostor, da slika izgleda moćnije */
+    height: 85vh; 
     position: relative;
 }
 
 .plavisloj {
-    background: rgba(13, 56, 92, 0.80); /* Blago sam smanjio na 0.80 da slika škole malo bolje progviri */
+    background: rgba(13, 56, 92, 0.80);
     width: 100%; 
     height: 100%;
     display: flex;
@@ -84,10 +81,9 @@ header.skrolovan {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 120px 20px 20px 20px; /* Dodat gornji padding (120px) da navigacija ne udari u "Znanje za budućnost" */
+    padding: 120px 20px 20px 20px;
 }
 
-/* Figma: Zajednička veličina 48px i bela boja */
 .plavisloj h1 {
     font-size: 48px;
     color: #FFFFFF;
@@ -95,13 +91,11 @@ header.skrolovan {
     margin-bottom: 30px;
 }
 
-/* Figma: Exo 2 Regular za prvi deo */
 .hero-regular {
     font-family: 'Exo 2', sans-serif;
     font-weight: 400;
 }
 
-/* Figma: Exo 2 Bold za drugi deo */
 .hero-bold {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
@@ -125,7 +119,7 @@ header.skrolovan {
     transform: scale(1.05);
 }
 
-/* --- TESLA U BROJEVIMA SEKCIJA --- */
+/* --- TESLA U BROJEVIMA --- */
 #brojevi-sekcija {
     margin: 5% 0% 10%;
     padding: 80px 5% 40px 5%;
@@ -133,7 +127,6 @@ header.skrolovan {
     background-color: #ffffff;
 }
 
-/* Figma: Exo 2 Bold, 48px, #3C9DD0 */
 .brojevi-glavni-naslov {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
@@ -142,7 +135,6 @@ header.skrolovan {
     margin-bottom: 5px;
 }
 
-/* Figma: Exo 2 Semibold, 48px, #4C4444 sa 71% vidljivosti */
 .brojevi-podnaslov {
     font-family: 'Exo 2', sans-serif;
     font-weight: 600;
@@ -163,7 +155,6 @@ header.skrolovan {
     min-width: 220px;
 }
 
-/* Figma: Exo 2 Bold, 96px, #3C9DD0 */
 #brojevi .kartica h2 {
     font-family: 'Exo 2', sans-serif;
     font-size: 96px;
@@ -173,7 +164,6 @@ header.skrolovan {
     margin-bottom: 15px;
 }
 
-/* Figma: Exo 2 Semibold, 48px, #4C4444 sa 71% vidljivosti */
 #brojevi .kartica p {
     font-family: 'Exo 2', sans-serif;
     font-size: 48px;
@@ -182,14 +172,13 @@ header.skrolovan {
     line-height: 1.2;
 }
 
-/* --- AKTUELNE VESTI SEKCIJA --- */
+/* --- AKTUELNE VESTI --- */
 #vesti {
     background-color: #f4f7f6;
     padding: 80px 10%;
     text-align: center;
 }
 
-/* Figma: Exo 2 Bold, 48px, #3C9DD0 */
 .vesti-glavni-naslov {
     font-family: 'Exo 2', sans-serif;
     font-weight: 700;
@@ -198,7 +187,6 @@ header.skrolovan {
     margin-bottom: 5px;
 }
 
-/* Figma: Exo 2 Semibold, 48px, #1A3A6B */
 .vesti-podnaslov {
     font-family: 'Exo 2', sans-serif;
     font-weight: 600;
@@ -211,8 +199,8 @@ header.skrolovan {
 .slajder-okvir {
     position: relative;
     width: 100%;
-    max-width: 1200px; /* Prilagodi širinu svom dizajnu */
-    margin: 0 auto;    /* Centrira ceo blok na sredinu ekrana */
+    max-width: 1200px; 
+    margin: 0 auto;   
     display: flex;
     align-items: center;
 }
@@ -220,21 +208,19 @@ header.skrolovan {
 .vesticontainer {
     display: flex;
     gap: 30px;
-    justify-content: flex-start; /* PROMENJENO sa center na flex-start da bi vesti isle u niz levo-desno */
-    overflow-x: auto;            /* KLJUČNO: Omogucava horizontalni skrol */
-    white-space: nowrap;         /* Sprečava prelamanje kartica u novi red */
+    justify-content: flex-start; 
+    overflow-x: auto;           
+    white-space: nowrap;       
     padding: 20px 10px;
     
-    /* Sakrivamo ruzni fabricki scrollbar (liniju za skrolovanje) na dnu da se vidi samo čist sajt */
-    scrollbar-width: none;       /* Za Firefox */
+    scrollbar-width: none;        /* --- Za firefox --- */
 }
 .vesticontainer::-webkit-scrollbar {
-    display: none;               /* Za Chrome, Safari i Operu */
+    display: none;                /* --- Za druge browsere --- */
 }
 
-/* Osiguravamo da kartice zadrže svoju punu širinu i ne skupe se */
 .vestikartica {
-    flex: 0 0 380px;             /* Kartica ce uvek biti tacno 400px široka u slajderu */
+    flex: 0 0 380px;       
     text-align: left;
     background: #ffffff;
     border-radius: 8px;
@@ -243,24 +229,24 @@ header.skrolovan {
     transition: transform 0.3s ease;
 }
 
-/* STIL ZA STRELICE */
+/*STRELICE */
 .vesti-strelice {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 30px;         /* Razmak između strelica i vesti */
+    margin-bottom: 30px;         
 }
 
 .strelica-btn {
-    position: absolute;  /* KLJUČNO: Dozvoljava nam da ih pomeramo bilo gde preko slajdera */
+    position: absolute;  
     top: 50%;
-    transform: translateY(-50%); /* Savršeno vertikalno centriranje */
-    background-color: #1A3A6B;   /* Tamno plava boja tvoje škole */
+    transform: translateY(-50%); 
+    background-color: #1A3A6B;   
     color: #ffffff;
     border: none;
     width: 50px;
     height: 50px;
-    border-radius: 50%;          /* Pravi savršen krug */
+    border-radius: 50%;      
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -272,21 +258,21 @@ header.skrolovan {
 
 /* Pozicija za levu strelicu */
 .strelica-btn.levo {
-    left: -25px; /* Gura je malo "van" okvira ulevo, preko ivice */
+    left: -25px;
 }
 
 /* Pozicija za desnu strelicu */
 .strelica-btn.desno {
-    right: -25px; /* Gura je malo "van" okvira udesno, preko ivice */
+    right: -25px;
 }
 
 .strelica-btn:hover {
-    background-color: #3C9DD0;   /* Svetlo plava na hover */
-    transform: scale(1.1);       /* Blago se poveća */
+    background-color: #3C9DD0;  
+    transform: scale(1.1);     
 }
 
 .strelica-btn.levo:hover {
-    transform: translateY(-50%) scale(1.1); /* Blago uvećanje na hover */
+    transform: translateY(-50%) scale(1.1); 
 }
 .strelica-btn.desno:hover {
     transform: translateY(-50%) scale(1.1);
@@ -302,7 +288,7 @@ header.skrolovan {
     object-fit: cover;
 }
 
-/* Prvi pasus - Datum vesti */
+
 .vest-datum {
     color: #3C9DD0;
     font-size: 0.8rem;
@@ -310,14 +296,14 @@ header.skrolovan {
     padding: 20px 20px 5px 20px;
 }
 
-/* Naslov vesti */
+
 .vestikartica h3 {
     color: #0d385c;
     font-size: 1.2rem;
     padding: 0 20px 10px 20px;
 }
 
-/* Drugi pasus - Kratak tekst/opis vesti */
+
 .vest-opis {
     color: #555;
     font-size: 0.95rem;
@@ -325,7 +311,7 @@ header.skrolovan {
 }
 
 
-/* --- PREDNOSTI (ZAŠTO IZABRATI TESLU) --- */
+/* --- ZAŠTO IZABRATI TESLU --- */
 #prednosti {
     padding: 80px 10%;
     text-align: center;
@@ -345,15 +331,14 @@ header.skrolovan {
     margin-bottom: 40px;
 }
 
-/* --- GLOBALNI STIL ZA NASLOVE SEKCIJA --- */
 .sekcija-naslov {
     text-align: center;
     margin-bottom: 50px;
 }
 
 .sekcija-naslov .nadnaslov {
-    font-family: 'Exo 2', sans-serif; /* PROMENJENO sa Poppins */
-    font-weight: 700;                 /* PROMENJENO sa 600 */
+    font-family: 'Exo 2', sans-serif; 
+    font-weight: 700;                 
     font-size: 14px;
     color: #3C9DD0; 
     letter-spacing: 1px;
@@ -361,29 +346,29 @@ header.skrolovan {
 }
 
 .sekcija-naslov h2 {
-    font-family: 'Exo 2', sans-serif; /* PROMENJENO sa Poppins */
+    font-family: 'Exo 2', sans-serif;
     font-size: 32px;
     font-weight: 700;
-    color: #1A3A6B;                   /* PROMENJENO sa #061c30 */
+    color: #1A3A6B;                   
 }
 
 /* --- SEKCIJA PREDNOSTI (KARTICE) --- */
 #prednosti {
-    padding: 60px 10%; /* Drži sekciju u istim granicama ekrana (10% levo/desno) */
+    padding: 60px 10%; 
     background-color: #ffffff;
 }
 
 .prednosti-kontejner {
     display: flex;
-    justify-content: space-between; /* Raspoređuje 3 kartice ravnomerno */
-    gap: 30px; /* Razmak između kartica ako se ekran smanji */
+    justify-content: space-between; 
+    gap: 30px; 
 }
 
 .prednost-kartica {
-    flex: 1; /* Sve tri kartice će imati potpuno istu širinu */
-    background-color: #F8FAFC; /* Blaga prljavo bela/siva pozadina sa Figme */
+    flex: 1; 
+    background-color: #F8FAFC; 
     padding: 40px 30px;
-    border-radius: 8px; /* Blago zaobljeni ćoškovi */
+    border-radius: 8px; 
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -391,13 +376,13 @@ header.skrolovan {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Blagi efekat lebdenja kada se pređe mišem preko kartice */
+
 .prednost-kartica:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Stilizovanje ikone u kartici */
+
 .kartica-ikona {
     font-size: 40px;
     color: #3C9DD0;
@@ -405,24 +390,24 @@ header.skrolovan {
 }
 
 .prednost-kartica h3 {
-    font-family: 'Exo 2', sans-serif; /* PROMENJENO sa Poppins */
+    font-family: 'Exo 2', sans-serif; 
     font-size: 20px;
-    font-weight: 700;                 /* PROMENJENO sa 600 */
-    color: #1A3A6B;                   /* PROMENJENO sa #061c30 */
+    font-weight: 700;                 
+    color: #1A3A6B;                  
     margin-bottom: 15px;
 }
 
 .prednost-kartica p {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
-    font-weight: 400;                 /* DODATO (Regular) */
-    color: #000000;                   /* PROMENJENO sa #4A5568 */
+    font-weight: 400;                 
+    color: #000000;                   
     line-height: 1.6;
     margin-bottom: 25px;
     flex-grow: 1; 
 }
 
-/* Stilizovanje plavih linkova na dnu kartica */
+
 .kartica-link {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -431,12 +416,12 @@ header.skrolovan {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 8px; /* Razmak između teksta i strelice */
+    gap: 8px; 
     transition: gap 0.2s ease;
 }
 
 .kartica-link:hover {
-    gap: 12px; /* Strelica se blago pomeri udesno na hover */
+    gap: 12px; 
 }
 
 /* --- SEKCIJA: SMEROVI (MREŽA KARTICA) --- */
@@ -445,17 +430,16 @@ header.skrolovan {
     background-color: #ffffff;
 }
 
-/* Pravimo mrežu od tačno 4 kolone */
 .smerovi-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
-    gap: 25px; /* Razmak između kartica */
+    gap: 25px;
 }
 
 .smer-kartica {
-    background-color: #F8FAFC; /* Svetlo siva pozadina iz Figme */
+    background-color: #F8FAFC; 
     border-radius: 12px;
-    overflow: hidden; /* Sprečava da gornja tamna pozadina prođe kroz zaobljene ćoškove */
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -466,9 +450,9 @@ header.skrolovan {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Gornji tamno-plavi deo kartice sa ikonicom */
+
 .smer-vrh {
-    background-color: #0d385c; /* Tamno plava boja škole */
+    background-color: #0d385c; 
     height: 100px;
     display: flex;
     justify-content: center;
@@ -477,32 +461,32 @@ header.skrolovan {
 
 .smer-vrh i {
     font-size: 35px;
-    color: #3C9DD0; /* Svetlo plave ikonice */
+    color: #3C9DD0; 
 }
 
-/* Donji deo kartice sa tekstom */
+
 .smer-telo {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Omogućava poravnanje elemenata unutar kartice */
+    flex-grow: 1; 
 }
 
 .smer-telo h4 {
-    font-family: 'Exo 2', sans-serif; /* PROMENJENO sa Poppins */
+    font-family: 'Exo 2', sans-serif; 
     font-size: 16px;
-    font-weight: 700;                 /* PROMENJENO sa 600 */
-    color: #000000;                   /* PROMENJENO sa #061c30 */
+    font-weight: 700;                 
+    color: #000000;                  
     margin-bottom: 8px;
     line-height: 1.4; 
-    min-height: 44px; /* Trik koji drži sve naslove u istoj ravni čak i ako imaju 2 reda texta */
+    min-height: 44px; 
 }
 
 .smer-telo .trajanje {
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
-    font-weight: 400;                 /* DODATO (Regular) */
-    color: rgba(76, 68, 68, 0.71);    /* PROMENJENO sa #a0aec0 (sada je #4C4444 na 71%) */
+    font-weight: 400;                
+    color: rgba(76, 68, 68, 0.71);  
     margin-bottom: 20px;
 }
 
@@ -512,7 +496,7 @@ header.skrolovan {
     font-weight: 500;
     color: #3C9DD0;
     text-decoration: none;
-    margin-top: auto; /* Gura link "Saznaj više" na samo dno kartice */
+    margin-top: auto; 
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -520,30 +504,30 @@ header.skrolovan {
 }
 
 .smer-link:hover {
-    gap: 10px; /* Strelica blago pobegne udesno na hover */
+    gap: 10px; 
 }
 
-/* --- SEKCIJA: POZIV NA AKCIJU (CTA) --- */
+/* --- CTA --- */
 #poziv-upis {
-    background-color: #0d385c; /* Tamno plavi blok preko celog ekrana */
+    background-color: #0d385c; 
     padding: 60px 10%;
     text-align: center;
     color: #ffffff;
 }
 
 .cta-nadnaslov {
-    font-family: 'Exo 2', sans-serif; /* PROMENJENO sa Poppins */
+    font-family: 'Exo 2', sans-serif;
     font-size: 13px;
-    font-weight: 700;                 /* PROMENJENO sa 600 */
+    font-weight: 700;                 
     color: #3C9DD0;
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
 
 #poziv-upis h2 {
-    font-family: 'Exo 2', sans-serif; /* PROMENJENO sa Poppins */
+    font-family: 'Exo 2', sans-serif; 
     font-size: 32px;
-    font-weight: 800;                 /* PROMENJENO sa 700 (Extra Bold) */
+    font-weight: 800;                 
     margin-bottom: 15px;
 }
 
@@ -552,7 +536,7 @@ header.skrolovan {
     font-size: 16px;
     color: #e2e8f0;
     max-width: 600px;
-    margin: 0 auto 30px auto; /* Centriranje pasusa i razmak do dugmića */
+    margin: 0 auto 30px auto; 
     line-height: 1.6;
 }
 
@@ -562,7 +546,7 @@ header.skrolovan {
     gap: 20px;
 }
 
-/* Glavno plavo dugme */
+
 .cta-btn {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -581,7 +565,7 @@ header.skrolovan {
     border-color: #2b82b3;
 }
 
-/* Drugo dugme - prozirno sa belim okvirom */
+
 .cta-btn.prozirno {
     background-color: transparent;
     border-color: #ffffff;
@@ -643,15 +627,13 @@ footer {
 
 /* --- IKONE SOCIJALNIH MREŽA --- */
 
-/* Poređaj krugove horizontalno sa razmakom */
-/* --- IKONE SOCIJALNIH MREŽA --- */
 .mreze-kontejner {
     display: flex;
     gap: 15px;
     margin-top: 15px;
 }
 
-/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
+
 .krug-mreza, .krug-mrezaig, .krug-mrezayt {
     display: flex;
     justify-content: center;
@@ -659,37 +641,36 @@ footer {
     
     width: 45px;            
     height: 45px;           
-    background-color: #ffffff; /* Bela pozadina kruga */
+    background-color: #ffffff;
     border-radius: 50%;     
-    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    text-decoration: none; 
     
     transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
-/* Podešavanje same IKONICE unutar kruga */
+
 .krug-mreza i, .krug-mrezaig, .krug-mrezayt {
-    font-size: 20px;          /* Veličina ikonice */
-    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    font-size: 20px;         
+    color: #061c30;          
     transition: color 0.3s ease;
 }
 
-/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
+
 .krug-mreza:hover {
-    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #3C9DD0;   
+    transform: translateY(-3px); 
 }
 
 .krug-mrezayt:hover {
-    background-color: #FF0000;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #FF0000;  
+    transform: translateY(-3px);
 }
 
 .krug-mrezaig:hover {
-    background-color: #E1306C;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #E1306C; 
+    transform: translateY(-3px);
 }
 
-/* ...a ikonica unutar njega u isto vreme postane bela */
 .krug-mreza:hover i {
     color: #ffffff;
 }
@@ -703,18 +684,16 @@ footer {
 }
 
 
-/* --- STIL ZA ISKAČUĆI MODAL --- */
-
-/* 1. Crna prozirna pozadina koja prekriva ceo ekran (Mora veliko M i P kao u HTML-u) */
+/* --- ISKAČUĆI MODAL --- */
 .ModalPozadina {
-    display: none;             /* KLJUČNO: Sakriva prozor čim se stranica učita! */
-    position: fixed;           /* Zaključano preko celog ekrana */
+    display: none;             
+    position: fixed;           
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Tamni prozirni sloj */
-    z-index: 2000;             /* Ide ispred svega */
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 2000;             
 }
 
 
@@ -729,7 +708,6 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Naslov unutar bele kutije */
 .ModalSadrzaj h2 {
     color: #0d385c;
     font-size: 28px;
@@ -738,7 +716,6 @@ footer {
     margin-bottom: 30px;
 }
 
-/* Lista i stavke */
 .ModalSadrzaj ul {
     list-style-type: disc;
     margin-left: 30px;
@@ -756,7 +733,7 @@ footer {
     text-decoration: underline;
 }
 
-/* 3. Dugme X za zatvaranje (Obrati pažnju na veliko Z i I) */
+/* 3. Dugme X */
 h3.ZatvoriIks {
     position: absolute;
     top: 20px;
@@ -765,19 +742,15 @@ h3.ZatvoriIks {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
-    margin: 0;       /* Resetuje fabričku marginu naslova */
+    margin: 0;  
 }
 
 h3.ZatvoriIks:hover {
-    color: #3C9DD0;  /* Svetlo plava na hover */
+    color: #3C9DD0;  
 }
 
 
-/* ==========================================================================
-   DODATAK: RESPONSIVE DIZAJN I HAMBURGER MENI
-   ========================================================================== */
-
-/* Hamburger ikona po defaultu sakrivena na velikim ekranima */
+/* DODATAK: RESPONSIVE DIZAJN I HAMBURGER MENI*/
 .hamburger {
     display: none;
     font-size: 28px;
@@ -798,7 +771,7 @@ h3.ZatvoriIks:hover {
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 24px; /* Povećano da bude uočljivije */
+    font-size: 24px; 
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -807,18 +780,15 @@ h3.ZatvoriIks:hover {
 }
 
 .hamburger-btn:hover {
-    color: #3C9DD0; /* Plava boja pri hoveru */
+    color: #3C9DD0; 
     transform: scale(1.05);
 }
 
 .hamburger-btn i {
-    font-size: 28px; /* Sama ikonica (bars) malo veća */
+    font-size: 28px; 
     margin-left: 8px;
 }
 
-/* =========================================
-   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
-   ========================================= */
 .overlay-meni {
     position: fixed;
     top: 0;
@@ -910,9 +880,6 @@ h3.ZatvoriIks:hover {
     }
 }
 
-
-/* MEDIA QUERIES ZA PRILAGOĐAVANJE TABLETIMA I TELEFONIMA */
-
 @media screen and (max-width: 992px) {
     /* Uklanjamo desktop navigaciju, palimo hamburger */
     .desktop-meni {
@@ -922,12 +889,11 @@ h3.ZatvoriIks:hover {
         display: block;
     }
     
-    /* Smerovi: umesto 4 kolone, neka budu 2 */
     .smerovi-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    /* Brojevi i Prednosti: Ređamo elemente jedan ispod drugog */
+
+
     #brojevi, .prednosti-kontejner {
         flex-direction: column;
         align-items: center;
@@ -950,7 +916,6 @@ h3.ZatvoriIks:hover {
         align-items: center !important;
     }
 
-    /* Savršeno centrirana lista korisnih linkova */
     #korisnilinkovi ul {
         display: flex !important;
         flex-direction: column !important;
@@ -959,24 +924,21 @@ h3.ZatvoriIks:hover {
         gap: 10px !important;
     }
 
-    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
     #socijalnemreze {
         align-items: center !important; 
         text-align: center !important;
     }
 
-    /* Ikonice ponovo idu u red, jedna pored druge! */
     .mreze-kontejner {
         display: flex !important;
-        flex-direction: row !important; /* Stavlja ih u horizontalni red */
-        justify-content: flex-start !important; /* Gura ih ulevo */
+        flex-direction: row !important; 
+        justify-content: flex-start !important; 
         gap: 15px !important;
         margin-top: 15px !important;
     }
 }
 
 @media screen and (max-width: 576px) {
-    /* Smerovi: 1 kolona na malim telefonima */
     .smerovi-grid {
         grid-template-columns: 1fr;
     }
@@ -990,7 +952,7 @@ h3.ZatvoriIks:hover {
     }
     
     #brojevi .kartica h2 {
-        font-size: 70px; /* Smanjeni brojevi da ne ispadaju iz ekrana */
+        font-size: 70px; 
     }
     
     .brojevi-podnaslov, .vesti-podnaslov {
@@ -998,13 +960,12 @@ h3.ZatvoriIks:hover {
     }
     
     .navigacija img {
-        height: 50px; /* Manji logo na mobilnom */
+        height: 50px; 
     }
 }
 
-/* OVO DODAJ U SVE SVOJE CSS FAJLOVE */
 .overlay-content a.aktivno-overlay,
 .overlay-nav ul li a.aktivno-overlay {
-    color: #4a90e2 !important; /* Plava boja */
+    color: #4a90e2 !important; 
     font-weight: 700;
 }

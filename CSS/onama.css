@@ -12,7 +12,7 @@ html, body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGACIJA (HEADER) --- */
+/* --- NAVIGACIJA --- */
 header {
     background-color: #072450; 
     padding: 30px;
@@ -67,7 +67,7 @@ header.skrolovan {
     color: #3C9DD0;
 }
 
-/* --- HERO SEKCIJA --- */
+/* --- HERO --- */
 .onama-hero {
     background-color: #092244;
     padding: 160px 0 100px 0;
@@ -93,7 +93,6 @@ header.skrolovan {
     font-weight: 700;
 }
 
-/* --- ZAJEDNIČKI STILOVI NASLOVA --- */
 .sekcija-nadnaslov {
     text-align: center;
     color: #3C9DD0;
@@ -113,7 +112,6 @@ header.skrolovan {
     margin-bottom: 40px;
 }
 
-/* --- SEKCIJA 1: MISIJA, VIZIJA, VREDNOSTI --- */
 .ko-smo-mi-sekcija {
     max-width: 1200px;
     margin: 80px auto;
@@ -170,7 +168,7 @@ header.skrolovan {
     line-height: 1.6;
 }
 
-/* --- SEKCIJA 2: ISTORIJAT --- */
+/* --- ISTORIJAT --- */
 .istorijat-sekcija {
     background-color: #ffffff;
     max-width: 1200px;
@@ -185,13 +183,11 @@ header.skrolovan {
     gap: 50px;
 }
 
-/* 1. Okvir mora da ima position: relative da bi plavi sloj znao gde da se zalepi */
 .istorijat-kolona-slika {
     flex: 0 0 45%;
     position: relative; 
 }
 
-/* 2. Sama slika ostaje kakva jeste */
 .istorijat-kolona-slika img {
     width: 100%;
     height: auto;
@@ -199,7 +195,6 @@ header.skrolovan {
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* 3. Dodajemo prozirni plavi sloj TAČNO preko slike */
 .istorijat-kolona-slika::after {
     content: '';
     position: absolute;
@@ -207,8 +202,8 @@ header.skrolovan {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 36, 80, 0.4); /* Plava boja sa 40% vidljivosti */
-    pointer-events: none; /* Omogućava da klikovi prolaze kroz sloj ako zatreba */
+    background-color: rgba(7, 36, 80, 0.4); 
+    pointer-events: none; 
 }
 
 
@@ -230,7 +225,7 @@ header.skrolovan {
     margin-bottom: 15px;
 }
 
-/* --- SEKCIJA 3: TESLA U BROJEVIMA --- */
+/* --- TESLA U BROJEVIMA --- */
 .brojevi-sekcija {
     background-color: #113061;
     padding: 60px 20px;
@@ -283,7 +278,7 @@ header.skrolovan {
     text-transform: lowercase;
 }
 
-/* --- SEKCIJA 4: UPRAVA / TIM --- */
+/* --- SEKCIJA: UPRAVA I TIM --- */
 .tim-sekcija {
     max-width: 1200px;
     margin: 90px auto;
@@ -318,12 +313,11 @@ header.skrolovan {
     color: #072450;
 }
 
-/* Centriranje i sečenje slike da savršeno stane u krug */
 .avatar-krug img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ovo je magija koja seče sliku tako da ne bude spljoštena */
-    border-radius: 50%; /* Prati ivice okvira da ostane okrugla */
+    object-fit: cover; 
+    border-radius: 50%; 
 }
 
 .clan-kartica h3 {
@@ -381,15 +375,10 @@ footer {
     transition: color 0.3s;
 }
 
-
-
 .footer ul li a:hover {
     color: #3C9DD0;
 }
 
-/* --- IKONE SOCIJALNIH MREŽA --- */
-
-/* Poređaj krugove horizontalno sa razmakom */
 /* --- IKONE SOCIJALNIH MREŽA --- */
 .mreze-kontejner {
     display: flex;
@@ -397,7 +386,6 @@ footer {
     margin-top: 15px;
 }
 
-/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
 .krug-mreza, .krug-mrezaig, .krug-mrezayt {
     display: flex;
     justify-content: center;
@@ -405,37 +393,35 @@ footer {
     
     width: 45px;            
     height: 45px;           
-    background-color: #ffffff; /* Bela pozadina kruga */
+    background-color: #ffffff; 
     border-radius: 50%;     
-    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    text-decoration: none;     
     
     transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
-/* Podešavanje same IKONICE unutar kruga */
 .krug-mreza i, .krug-mrezaig, .krug-mrezayt {
-    font-size: 20px;          /* Veličina ikonice */
-    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    font-size: 20px;         
+    color: #061c30;          
     transition: color 0.3s ease;
 }
 
-/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
+
 .krug-mreza:hover {
-    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #3C9DD0;
+    transform: translateY(-3px); 
 }
 
 .krug-mrezayt:hover {
-    background-color: #FF0000;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #FF0000;  
+    transform: translateY(-3px); 
 }
 
 .krug-mrezaig:hover {
-    background-color: #E1306C;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #E1306C; 
+    transform: translateY(-3px); 
 }
 
-/* ...a ikonica unutar njega u isto vreme postane bela */
 .krug-mreza:hover i {
     color: #ffffff;
 }
@@ -451,24 +437,48 @@ footer {
 
 /* --- MOBILNA RESPONSIVNOST --- */
 @media (max-width: 992px) {
-    .navigacija ul { display: none; }
-    .hamburger { display: block !important; cursor: pointer; }
-    .hamburger span { display: block; width: 25px; height: 3px; background: white; margin: 5px; }
+    .navigacija ul {
+         display: none; 
+        }
+    .hamburger { 
+        display: block !important; cursor: pointer;
+     }
+    .hamburger span { 
+        display: block;
+         width: 25px; 
+         height: 3px; 
+         background: white; 
+         margin: 5px; 
+    }
     
-    .mvv-kontejner, .tim-mreza { flex-direction: column; align-items: center; }
-    .istorijat-kontejner { flex-direction: column; text-align: center; }
-    .istorijat-kolona-slika { margin-bottom: 20px; }
-    .brojevi-mreza { flex-wrap: wrap; }
-    .broj-kutija { flex: 0 0 45%; }
-    .footer-kontejner { flex-direction: column; gap: 30px; }
+    .mvv-kontejner, .tim-mreza { 
+        flex-direction: column; 
+        align-items: center;
+     }
+
+    .istorijat-kontejner { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    .istorijat-kolona-slika { 
+        margin-bottom: 20px;
+     }
+
+    .brojevi-mreza { 
+        flex-wrap: wrap;
+     }
+
+    .broj-kutija { 
+        flex: 0 0 45%; 
+    }
+
+    .footer-kontejner {
+         flex-direction: column; gap: 30px; 
+        }
 }
 
 /* --- STIL ZA HAMBURGER I OVERLAY --- */
-/*==========================================================================
-   DODATAK: RESPONSIVE DIZAJN I HAMBURGER MENI
-   ========================================================================== */
-
-/* Hamburger ikona po defaultu sakrivena na velikim ekranima */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -489,7 +499,7 @@ footer {
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 24px; /* Povećano da bude uočljivije */
+    font-size: 24px; 
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -498,18 +508,16 @@ footer {
 }
 
 .hamburger-btn:hover {
-    color: #3C9DD0; /* Plava boja pri hoveru */
+    color: #3C9DD0;
     transform: scale(1.05);
 }
 
 .hamburger-btn i {
-    font-size: 28px; /* Sama ikonica (bars) malo veća */
+    font-size: 28px; 
     margin-left: 8px;
 }
 
-/* =========================================
-   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
-   ========================================= */
+/*FULLSCREEN OVERLAY MENI (HARVARD STYLE) */
 .overlay-meni {
     position: fixed;
     top: 0;
@@ -619,7 +627,6 @@ footer {
         align-items: center !important;
     }
 
-    /* Savršeno centrirana lista korisnih linkova */
     #korisnilinkovi ul {
         display: flex !important;
         flex-direction: column !important;
@@ -628,7 +635,7 @@ footer {
         gap: 10px !important;
     }
 
-    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
+
     #socijalnemreze {
         align-items: center !important; 
         text-align: center !important;
@@ -637,16 +644,15 @@ footer {
     /* Ikonice ponovo idu u red, jedna pored druge! */
     .mreze-kontejner {
         display: flex !important;
-        flex-direction: row !important; /* Stavlja ih u horizontalni red */
-        justify-content: flex-start !important; /* Gura ih ulevo */
+        flex-direction: row !important; 
+        justify-content: flex-start !important; 
         gap: 15px !important;
         margin-top: 15px !important;
     }
 }
 
-/* OVO DODAJ U SVE SVOJE CSS FAJLOVE */
 .overlay-content a.aktivno-overlay,
 .overlay-nav ul li a.aktivno-overlay {
-    color: #4a90e2 !important; /* Plava boja */
+    color: #4a90e2 !important; 
     font-weight: 700;
 }

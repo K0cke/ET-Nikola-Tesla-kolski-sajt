@@ -12,11 +12,11 @@ html, body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGACIJA (HEADER) --- */
+/* --- NAVIGACIJA--- */
 header {
     background-color: #072450;
-    padding: 20px 0; /* Malo sam smanjio padding da header bude elegantniji pri skrolu */
-    position: fixed; /* OVO je ključno - drži ga uvek na vrhu */
+    padding: 20px 0; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -68,12 +68,10 @@ header.skrolovan {
 }
 
 
-/* ==========================================================================
-   1. BANER / HERO SEKCIJA (Tekst na sredini, prilagođeno fiksnom headeru)
-   ========================================================================== */
+/*1. BANER / HERO SEKCIJA (Tekst na sredini, prilagođeno fiksnom headeru) */
 .smerovi-hero {
     background-color:  #092244;; 
-    padding: 220px 0 140px 0;  /* Pravi prostor ispod fiksnog headera, tekst ostaje u sredini */
+    padding: 220px 0 140px 0;
     text-align: center;        
     width: 100%; 
 }
@@ -97,36 +95,33 @@ header.skrolovan {
 }
 
 
-/* ==========================================================================
-   GLAVNA SEKCIJA I MREŽA (GRID)
-   ========================================================================== */
-/* Kontejner za listu */
+/*GLAVNA SEKCIJA I MREŽA (GRID) */
 .smer-lista {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Razmak između kartica */
+    gap: 30px; 
 }
 
 .naslov-sekcije {
     text-align: center;
-    margin-bottom: 90px; /* Razmak između naslova i kartica */
+    margin-bottom: 90px; 
     margin-top: 90px;
 }
 
 .sekcija-nadnaslov {
-    color: #3C9DD0; /* Identicna svetlo plava boja */
+    color: #3C9DD0; 
     font-size: 14px;
     font-weight: 700;
-    text-transform: uppercase; /* Da budu velika slova */
-    letter-spacing: 1.5px; /* Daje onaj elegantan razmak između slova */
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
     margin-bottom: 10px;
 }
 
 .sekcija-glavni-naslov {
-    color: #072450; /* Identicna tamno teget boja */
-    font-size: 32px; /* Veći font za "Svih 7 smerova" */
+    color: #072450; 
+    font-size: 32px; 
     font-weight: 700;
     margin: 0;
 }
@@ -159,7 +154,6 @@ header.skrolovan {
     display: block;
 }
 
-/* Slika sa plavim efektom */
 .smer-slika-kontejner {
     position: relative;
     width: 300px;
@@ -179,10 +173,9 @@ header.skrolovan {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(60, 157, 208, 0.4); /* Tvoja plava boja sa prozirnošću */
+    background: rgba(60, 157, 208, 0.4);
 }
 
-/* Desna strana sa tekstom */
 .smer-sadrzaj {
     padding: 30px;
     display: flex;
@@ -217,7 +210,7 @@ header.skrolovan {
 .smer-meta {
     font-size: 13px;
     color: #777;
-    margin-top: auto; /* Gura ovo na dno kartice ako treba */
+    margin-top: auto; /
 }
 
 
@@ -272,16 +265,12 @@ footer {
 }
 
 /* --- IKONE SOCIJALNIH MREŽA --- */
-
-/* Poređaj krugove horizontalno sa razmakom */
-/* --- IKONE SOCIJALNIH MREŽA --- */
 .mreze-kontejner {
     display: flex;
     gap: 15px;
     margin-top: 15px;
 }
 
-/* Krugovi ostaju isti, ali im menjamo pozadinu na tamniju ili svetliju po želji */
 .krug-mreza, .krug-mrezaig, .krug-mrezayt {
     display: flex;
     justify-content: center;
@@ -289,37 +278,34 @@ footer {
     
     width: 45px;            
     height: 45px;           
-    background-color: #ffffff; /* Bela pozadina kruga */
+    background-color: #ffffff; 
     border-radius: 50%;     
-    text-decoration: none;     /* Da ikonica ne dobije podvlačenje */
+    text-decoration: none;    
     
     transition: transform 0.3s ease, background-color 0.3s ease; 
 }
 
-/* Podešavanje same IKONICE unutar kruga */
 .krug-mreza i, .krug-mrezaig, .krug-mrezayt {
-    font-size: 20px;          /* Veličina ikonice */
-    color: #061c30;           /* Boja ikonice (ista kao tamna boja footera) */
+    font-size: 20px;          
+    color: #061c30;           
     transition: color 0.3s ease;
 }
 
-/* EFEKAT NA HOVER: Kada pređeš mišem preko kruga... */
 .krug-mreza:hover {
-    background-color: #3C9DD0;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #3C9DD0;   
+    transform: translateY(-3px); 
 }
 
 .krug-mrezayt:hover {
-    background-color: #FF0000;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #FF0000;   
+    transform: translateY(-3px); 
 }
 
 .krug-mrezaig:hover {
-    background-color: #E1306C;   /* Krug postaje svetlo plav */
-    transform: translateY(-3px); /* Krug skoči malo nagore */
+    background-color: #E1306C;   
+    transform: translateY(-3px); 
 }
 
-/* ...a ikonica unutar njega u isto vreme postane bela */
 .krug-mreza:hover i {
     color: #ffffff;
 }
@@ -335,24 +321,22 @@ footer {
 
 /* RESPONSIVE - Prilagođavanje za telefone */
 @media (max-width: 768px) {
-    /* Navigacija na mobilnom - ako koristiš onaj standardni JS, 
-       ovo će pomoći da se elementi lepo slože */
+
     .navigacija {
         padding: 0 20px;
     }
     
     .navigacija ul {
-        display: none; /* Ovo ćeš kontrolisati preko JS-a za hamburger meni */
+        display: none; 
     }
 
-    /* Smerovi kartice - ključna promena */
     .smer-kartica {
-        flex-direction: column; /* Ređa elemente jedan ispod drugog */
+        flex-direction: column; 
     }
 
     .smer-slika-kontejner {
-        width: 100%; /* Slika ide celom širinom */
-        height: 200px; /* Visina prilagođena telefonu */
+        width: 100%; 
+        height: 200px; 
     }
 
     .smer-sadrzaj {
@@ -375,7 +359,6 @@ footer {
         align-items: center !important;
     }
 
-    /* Savršeno centrirana lista korisnih linkova */
     #korisnilinkovi ul {
         display: flex !important;
         flex-direction: column !important;
@@ -384,31 +367,28 @@ footer {
         gap: 10px !important;
     }
 
-    /* KLJUČNO ZA MREŽE: Ovim ih skidamo sa sredine ekrana i guramo ulevo */
     #socijalnemreze {
         align-items: center !important; 
         text-align: center !important;
     }
 
-    /* Ikonice ponovo idu u red, jedna pored druge! */
     .mreze-kontejner {
         display: flex !important;
-        flex-direction: row !important; /* Stavlja ih u horizontalni red */
-        justify-content: flex-start !important; /* Gura ih ulevo */
+        flex-direction: row !important; 
+        justify-content: flex-start !important; 
         gap: 15px !important;
         margin-top: 15px !important;
     }
 }
 
 /* Hamburger dugme za mobilni */
-/* Povećanje i stilizovanje hamburger dugmeta */
 .hamburger-btn {
     background: none;
     border: none;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 24px; /* Povećano da bude uočljivije */
+    font-size: 24px; 
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -417,18 +397,16 @@ footer {
 }
 
 .hamburger-btn:hover {
-    color: #3C9DD0; /* Plava boja pri hoveru */
+    color: #3C9DD0;
     transform: scale(1.05);
 }
 
 .hamburger-btn i {
-    font-size: 28px; /* Sama ikonica (bars) malo veća */
+    font-size: 28px;
     margin-left: 8px;
 }
 
-/* =========================================
-   FULLSCREEN OVERLAY MENI (HARVARD STYLE)
-   ========================================= */
+/*FULLSCREEN OVERLAY MENI (HARVARD STYLE) */
 .overlay-meni {
     position: fixed;
     top: 0;
